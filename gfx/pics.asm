@@ -310,9 +310,6 @@ MagnetonBackpic:     INCBIN "gfx/pokemon/magneton/back.2bpp.lz"
 QwilfishFrontpic:    INCBIN "gfx/pokemon/qwilfish/front.animated.2bpp.lz"
 SuicuneBackpic:      INCBIN "gfx/pokemon/suicune/back.2bpp.lz"
 SlowkingBackpic:     INCBIN "gfx/pokemon/slowking/back.2bpp.lz"
-ElekidBackpic:       INCBIN "gfx/pokemon/elekid/back.2bpp.lz"
-CelebiBackpic:       INCBIN "gfx/pokemon/celebi/back.2bpp.lz"
-KrabbyBackpic:       INCBIN "gfx/pokemon/krabby/back.2bpp.lz"
 
 
 SECTION "Pics 12", ROMX
@@ -584,10 +581,6 @@ ArticunoBackpic:     INCBIN "gfx/pokemon/articuno/back.2bpp.lz"
 DittoBackpic:        INCBIN "gfx/pokemon/ditto/back.2bpp.lz"
 WeedleBackpic:       INCBIN "gfx/pokemon/squeakrag/back.2bpp.lz"
 CleffaBackpic:       INCBIN "gfx/pokemon/comphost/back.2bpp.lz"
-DrowzeeBackpic:      INCBIN "gfx/pokemon/drowzee/back.2bpp.lz"
-GastlyBackpic:       INCBIN "gfx/pokemon/gastly/back.2bpp.lz"
-MandibladeFrontpic:  INCBIN "gfx/pokemon/mandiblade/front.animated.2bpp.lz"
-SwinubFrontpic:      INCBIN "gfx/pokemon/swinub/front.animated.2bpp.lz"
 
 
 SECTION "Pics 18", ROMX
@@ -668,6 +661,14 @@ Porygon2Frontpic:    INCBIN "gfx/pokemon/porygon2/front.animated.2bpp.lz"
 
 SECTION "Pics 20", ROMX
 AipomFrontpic:       INCBIN "gfx/pokemon/aipom/front.animated.2bpp.lz"
+ElekidBackpic:       INCBIN "gfx/pokemon/elekid/back.2bpp.lz"
+CelebiBackpic:       INCBIN "gfx/pokemon/celebi/back.2bpp.lz"
+KrabbyBackpic:       INCBIN "gfx/pokemon/krabby/back.2bpp.lz"
+DrowzeeBackpic:      INCBIN "gfx/pokemon/drowzee/back.2bpp.lz"
+GastlyBackpic:       INCBIN "gfx/pokemon/gastly/back.2bpp.lz"
+MandibladeFrontpic:  INCBIN "gfx/pokemon/mandiblade/front.animated.2bpp.lz"
+SwinubFrontpic:      INCBIN "gfx/pokemon/swinub/front.animated.2bpp.lz"
+
 
 SECTION "Pics 21", ROMX
 
