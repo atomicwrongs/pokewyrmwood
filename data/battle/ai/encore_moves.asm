@@ -1,0 +1,28 @@
+; AI_SMART encourages these moves with Encore.
+
+EncoreMoves:
+	db SWORDS_DANCE
+	db WHIRLWIND
+	db LEER
+	db ROAR
+	db DISABLE
+	db LEECH_SEED
+	db GROWTH
+	db POISONPOWDER
+	db STRING_SHOT
+	db MEDITATE
+	db AGILITY
+	db TELEPORT
+	db SCREECH
+	db HAZE
+	db FOCUS_ENERGY
+	db DREAM_EATER
+	db SHARPEN
+	db SUBSTITUTE
+	db TRIPLE_KICK
+	db SPIDER_WEB
+	db FLAME_WHEEL
+	db AEROBLAST
+	db COTTON_SPORE
+	db POWDER_SNOW
+	db -1 ; end

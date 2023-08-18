@@ -1,0 +1,12 @@
+Flypoints:
+; entries correspond to FLY_* constants
+; Johto
+	; landmark, spawn point
+	db LANDMARK_SPECIAL,    SPAWN_NEW_BARK
+	db LANDMARK_NEW_BARK,   SPAWN_NEW_BARK
+	db LANDMARK_TARRAGON_TOWN,    SPAWN_TARRAGON_TOWN
+	db LANDMARK_CHAMOMILE_CITY,   SPAWN_CHAMOMILE_CITY
+	db LANDMARK_ROUTE_1,      SPAWN_N_A
+; Kanto
+	db LANDMARK_INDIGO_PLATEAU,   SPAWN_INDIGO
+	db -1 ; end
