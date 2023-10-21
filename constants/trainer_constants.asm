@@ -702,6 +702,9 @@ DEF KRIS EQU __trainer_class__
 	const LEE_1_LULLABEAR
 	const LEE_1_PUPAGE
 	const LEE_1_REPTRIP
+	const LEE_2_LULLABEAR
+	const LEE_2_PUPAGE
+	const LEE_2_REPTRIP
 	
 	trainerclass MYSTICALMAN ; 43
 	const EUSINE

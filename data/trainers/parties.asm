@@ -3509,6 +3509,27 @@ LeeGroup:
 	db  4, SENTRET
 	db -1 ; end
 
+	; LEE (4)
+	db "LEE@", TRAINERTYPE_NORMAL
+	db  10, LULLABEAR
+	db  9, SENTRET
+	db  6, HOOTHOOT
+	db -1 ; end
+
+	; LEE (5)
+	db "LEE@", TRAINERTYPE_NORMAL
+	db  10, PUPAGE
+	db  9, SENTRET
+	db  6, SPINARAK
+	db -1 ; end
+
+	; LEE (6)
+	db "LEE@", TRAINERTYPE_NORMAL
+	db  10, REPTRIP
+	db  9, SENTRET
+	db 6, BELLSPROUT
+	db -1 ; end
+
 MysticalmanGroup:
 	; MYSTICALMAN (1)
 	db "EUSINE@", TRAINERTYPE_MOVES

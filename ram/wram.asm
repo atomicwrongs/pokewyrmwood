@@ -3061,8 +3061,9 @@ wKarensRoomSceneID::                db
 wLancesRoomSceneID::                db
 wHallOfFameSceneID::                db
 wChamomileParkSceneID::             db
+wChamomileGymOutsideSceneID::       db
 
-	ds 112
+	ds 111
 
 ; fight counts
 wJackFightCount::    db
