@@ -17,6 +17,7 @@ ChamomileGymOutsideNoop1Scene:
 	end
 
 ChamomileGymOutsideNoop2Scene:
+	disappear CHAMOGYM_LEE
 	end
 	
 ChamomileGymSign:
@@ -41,31 +42,18 @@ Basketballboy1Script:
 	faceplayer
 	opentext
 	writetext BasketballLamentText
-	waitbutton
+	promptbutton
 	writetext BasketballQuestionText
 	yesorno
 	iffalse .NoBall
-	sjump .Yesball
-	
-.PlayedBasketball
-	jumptextfaceplayer ThanksBasketball
-
-.NoBall
-	writetext NoBallText
-	waitbutton
-	closetext
-	end
-
-.Yesball
 	writetext YesBallText
 	waitbutton
 	closetext
-	farcall FadeOutPalettes
-	playsound SFX_TACKLE
-	playsound SFX_RUN
-	playsound SFX_THROW_BALL
-	playsound SFX_TACKLE
-	farcall FadeInPalettes
+	special FadeOutPalettes
+	special FadeOutMusic
+	pause 20
+	special LoadMapPalettes
+	special RestartMapMusic
 	opentext
 	writetext CoolBallText
 	promptbutton
@@ -79,17 +67,27 @@ Basketballboy1Script:
 	closetext
 	end
 	
+.PlayedBasketball
+	jumptextfaceplayer ThanksBasketball
+
+.NoBall
+	writetext NoBallText
+	waitbutton
+	closetext
+	end
+	
 BasketballLamentText:
-	text "Aw... that older kid was"
-	line "playing basketball with"
-	cont "us, but now he's gone,"
-	cont "our teams aren't even..."
+	text "Aw... that older"
+	line "kid was playing"
+	cont "ball with us, but"
+	cont "now our teams"
+	cont "aren't even."
 	done
 
 BasketballQuestionText:
 	text "Hey, wait! Would"
 	line "you play with us"
-	cont "for a little while?"
+	cont "for a while?"
 	
 	para "Just one game!"
 	done
@@ -107,9 +105,7 @@ NoBallText:
 YesBallText:
 	text "You will?!"
 	line "Come on, guys!"
-	cont "Let's dunk some"
-	cont "hoops with"
-	cont "<PLAYER>!"
+	cont "Let's dunk!"
 	done
 	
 CoolBallText:
@@ -118,10 +114,9 @@ CoolBallText:
 	cont "You're great,"
 	cont "<PLAYER>!"
 	
-	para "Here, for"
-	line "giving us a"
-	cont "great ball"
-	cont "game!"
+	para "Here, this is"
+	line "for giving us a"
+	cont "great ball game!"
 	done
 
 GotGreatballText:
@@ -181,10 +176,10 @@ BallBoy1Text2:
 Basketballboy3Script:
 	checkevent EVENT_PLAYED_BASKETBALL
 	iftrue .PlayedBasketball3
-	jumptextfaceplayer BallBoy2Text2
+	jumptextfaceplayer BallBoy2Text1
 
 .PlayedBasketball3:
-	jumptextfaceplayer BallBoy2Text1
+	jumptextfaceplayer BallBoy2Text2
 	
 BallBoy2Text1:
 	text "Guess we can't"
@@ -206,52 +201,18 @@ BallBoy2Text2:
 	done
 	
 LeeFightTopScript:
-	moveobject CHAMOGYM_LEE, 7, 11
 	special FadeOutMusic
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	applymovement CHAMOGYM_LEE, LeeWalksToYou1
+	turnobject PLAYER, DOWN
 	sjump LeeFightScriptMain
 
 LeeFightBottomScript:
-	moveobject CHAMOGYM_LEE, 7, 11
 	special FadeOutMusic
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	applymovement CHAMOGYM_LEE, LeeWalksToYou2
+	turnobject PLAYER, UP
 	sjump LeeFightScriptMain
-
-LeeWalksToYou1:
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
-	turn_head UP
-	step_end
-
-LeeWalksToYou2:
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
-	turn_head DOWN
-	step_end
-	
-LeeScript:
-	end
 
 LeeFightScriptMain:
 	opentext
@@ -317,11 +278,11 @@ LeeFightScriptMain:
 	special HealParty
 	end
 
-RivalChamoWinText:
+RivalChamoLossText:
 	text "...Hmph."
 	done
 
-RivalChamoLossText:
+RivalChamoWinText:
 	text "Don't get smug."
 	line "The GYM LEADER"
 	cont "softened me up"
@@ -332,9 +293,9 @@ LeeGrouchyText:
 	text "... <PLAYER>?"
 	line "Just my luck."
 	
-	para "How's... uh..."
-	line "... have you..."
-	cont "...caught any good"
+	para "How's, uh..."
+	line "... have you"
+	cont "...caught any"
 	cont "#MON lately...?"
 	
 	para "... How about"
@@ -350,7 +311,7 @@ LeePreFightText:
 	cont "friends with her"
 	cont "forever."
 	
-	para "She wouldn't under-"
+	para "She won't under-"
 	line "stand. We're"
 	cont "nothing alike."
 	
@@ -362,7 +323,7 @@ LeePreFightText:
 	para "C'mere!"
 	done
 
-ChamoGymRivalWin:
+ChamoGymRivalLoss:
 	text "Ugh. You're"
 	line "just so good at"
 	cont "battling, aren't"
@@ -382,7 +343,7 @@ ChamoGymRivalWin:
 	cont "kid."
 	done
 
-ChamoGymRivalLoss:
+ChamoGymRivalWin:
 	text "... Are you going"
 	line "easy on me?"
 	
@@ -409,6 +370,28 @@ ChamoGymRivalLoss:
 	
 	para "Later."
 	done
+
+LeeWalksToYou1:
+	step DOWN
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	turn_head UP
+	step_end
+
+LeeWalksToYou2:
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	turn_head DOWN
+	step_end
+	
+LeeScript:
+	end
 
 MovementLeeLeavesChamoGym:
 	step LEFT
@@ -440,6 +423,14 @@ ChamoBeautyText:
 	cont "her."
 	done
 
+ChamomileSportsSign:
+	jumptext ChamoSportText
+
+ChamoSportText:
+	text "CHAMOMILE CAMPUS"
+	line "BALL COURT"
+	done
+
 ChamoGymBallScript:
 	itemball SUPER_POTION
 
@@ -454,11 +445,12 @@ ChamomileGymOutside_MapEvents:
 
 	def_bg_events
 	bg_event 16, 10, BGEVENT_READ, ChamomileGymSign
+	bg_event 4, 15, BGEVENT_READ, ChamomileSportsSign
 
 	def_object_events
-	object_event 29, 29, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LeeScript, -1
+	object_event 7, 16, SPRITE_RIVAL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LEE_CHAMOMILECITY
 	object_event 4, 10, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 3, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Basketballboy1Script, -1
-	object_event 8, 11, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Basketballboy2Script, -1
+	object_event 8, 11, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Basketballboy2Script, -1
 	object_event 5, 13, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, Basketballboy3Script, -1
 	object_event 16, 14, SPRITE_BEAUTY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 3, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Beauty1Script, -1
 	object_event 6, 25, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, ChamoGymBallScript, EVENT_CHAMO_GYM_BALL
