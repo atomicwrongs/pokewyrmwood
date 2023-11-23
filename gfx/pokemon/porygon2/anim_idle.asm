@@ -1,2 +1,2 @@
-	frame 3, 30
+	frame 1, 30
 	endanim

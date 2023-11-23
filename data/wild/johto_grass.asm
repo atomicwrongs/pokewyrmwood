@@ -152,38 +152,38 @@ JohtoGrassWildMons:
 	def_grass_wildmons CHAMOMILE_PARK
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 10, WHIZZEL
-	db 11, EEVEE
-	db 11, BUNEARY
-	db 12, BUNEARY
-	db 15, FURRET
-	db 12, CHERUBI
-	db 13, AZURILL
-	db 14, EEVEE
-	db 15, HOPPIP
-	db 16, BUDEW
+	db 10, SPECTREON
+	db 11, CHESPIN
+	db 11, QUILLADIN
+	db 12, CHESNAUGHT
+	db 15, CHESPIN
+	db 12, FUTUREON
+	db 13, BURRUSSET
+	db 14, BURRUSSET
+	db 15, SWOOBAT
+	db 16, WOOBAT
 	; day
-	db 10, WHIZZEL
-	db 11, EEVEE
-	db 11, BUNEARY
-	db 12, BUNEARY
-	db 15, FURRET
-	db 12, CHERUBI
-	db 14, PUGILHISS
-	db 15, HOPPIP
-	db 16, BUDEW
-	db 18, SNUBBULL
+	db 10, SPECTREON
+	db 11, CHESPIN
+	db 11, QUILLADIN
+	db 12, CHESNAUGHT
+	db 15, CHESPIN
+	db 12, FUTUREON
+	db 13, BURRUSSET
+	db 14, BURRUSSET
+	db 15, SWOOBAT
+	db 16, WOOBAT
 	; nite
-	db 10, WHIZZEL
-	db 11, BUNEARY
-	db 12, EEVEE
-	db 15, FURRET
-	db 12, CHERUBI
-	db 13, AZURILL
-	db 14, MOMENTAIRY
-	db 15, TRUBBISH
-	db 16, GRIMER
-	db 18, SNUBBULL
+	db 10, SPECTREON
+	db 11, CHESPIN
+	db 11, QUILLADIN
+	db 12, CHESNAUGHT
+	db 15, CHESPIN
+	db 12, FUTUREON
+	db 13, BURRUSSET
+	db 14, BURRUSSET
+	db 15, SWOOBAT
+	db 16, WOOBAT
 	end_grass_wildmons
 
 	db -1 ; end
