@@ -1,10 +1,10 @@
 	db "ATROCIOUS@" ; species name
 	dw 2104, 5180 ; height, weight
 
-	db   "It appears when-"
-	next "ever there is"
-	next "world conflict,"
+	db   "When it rages,"
+	next "it can reduce a"
+	next "lake to steam."
 
-	page "burning down any"
-	next "place it travels"
-	next "through.@"
+	page "Afterwards, it"
+	next "rains for weeks"
+	next "for miles around.@"

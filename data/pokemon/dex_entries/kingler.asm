@@ -1,10 +1,10 @@
-	db "PINCER@" ; species name
+	db "EXCAVATOR@" ; species name
 	dw 403, 1320 ; height, weight
 
-	db   "Its oversized claw"
-	next "is very powerful,"
-	next "but when it's not"
+	db   "With its powerful"
+	next "claw, it hollows"
+	next "out seaside cliffs."
 
-	page "in battle, the"
-	next "claw just gets in"
-	next "the way.@"
+	page "It rules these"
+	next "caves like a"
+	next "mighty ruler.@"

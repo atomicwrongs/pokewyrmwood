@@ -234,6 +234,8 @@ ChamomileCity_MapEvents:
 	warp_event 36, 25, CHAMOMILE_POKEMART, 1
 	warp_event 42, 21, CHAMOMILE_STONEHOUSE, 1
 	warp_event 43, 21, CHAMOMILE_STONEHOUSE, 1
+	warp_event 24, 35, ROUTE_103, 1
+	warp_event 25, 35, ROUTE_103, 1
 
 	def_coord_events
 

@@ -150,40 +150,77 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 	
 	def_grass_wildmons CHAMOMILE_PARK
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 5 percent ; encounter rates: morn/day/nite
 	; morn
-	db 10, SPECTREON
-	db 11, CHESPIN
-	db 11, QUILLADIN
-	db 12, CHESNAUGHT
-	db 15, CHESPIN
-	db 12, FUTUREON
-	db 13, BURRUSSET
-	db 14, BURRUSSET
-	db 15, SWOOBAT
-	db 16, WOOBAT
+	db 9, EEVEE
+	db 7, EEVEE
+	db 8, CHERUBI
+	db 9, CHERUBI
+	db 6, BUNEARY
+	db 7, BUNEARY
+	db 6, COMPHOST
+	db 8, CATERPIE
+	db 6, CATERPIE
+	db 9, METAPOD
 	; day
-	db 10, SPECTREON
-	db 11, CHESPIN
-	db 11, QUILLADIN
-	db 12, CHESNAUGHT
-	db 15, CHESPIN
-	db 12, FUTUREON
-	db 13, BURRUSSET
-	db 14, BURRUSSET
-	db 15, SWOOBAT
-	db 16, WOOBAT
+	db 9, WHIZZEL
+	db 7, WHIZZEL
+	db 8, BUDEW
+	db 9, BUDEW
+	db 6, BUNEARY
+	db 7, AZURILL
+	db 6, COMPHOST
+	db 8, PUGILHISS
+	db 6, CATERPIE
+	db 9, METAPOD
 	; nite
-	db 10, SPECTREON
-	db 11, CHESPIN
-	db 11, QUILLADIN
-	db 12, CHESNAUGHT
-	db 15, CHESPIN
-	db 12, FUTUREON
-	db 13, BURRUSSET
-	db 14, BURRUSSET
-	db 15, SWOOBAT
-	db 16, WOOBAT
+	db 9, POOCHYENA
+	db 7, PARASOUL
+	db 8, GLIGAR
+	db 9, WHIZZEL
+	db 6, VENONAT
+	db 7, YANMA
+	db 6, TRUBBISH
+	db 8, MURKROW
+	db 6, CATERPIE
+	db 9, METAPOD
+	end_grass_wildmons
+
+	def_grass_wildmons ROUTE_103
+	db 5 percent, 10 percent, 5 percent ; encounter rates: morn/day/nite
+	; morn
+	db 9, MANKEY
+	db 7, MANKEY
+	db 8, WALLOPY
+	db 9, WALLOPY
+	db 9, WATTREL
+	db 10, MIENFOO
+	db 9, AUDINO
+	db 10, LEDYBA
+	db 8, NACLI
+	db 9, MUTTSCRAP
+	; day
+	db 9, MANKEY
+	db 7, MANKEY
+	db 8, NACLI
+	db 9, NACLI
+	db 9, WATTREL
+	db 10, NIDORAN_F
+	db 9, NIDORAN_M
+	db 10, LEDYBA
+	db 8, POOCHYENA
+	db 9, MUTTSCRAP
+	; nite
+	db 9, MANKEY
+	db 7, NACLI
+	db 8, PEBBOWL
+	db 9, PANSULK
+	db 9, PARASOUL
+	db 10, MOMENTAIRY
+	db 11, AUDINO
+	db 10, HOOTHOOT
+	db 8, GLIGAR
+	db 9, MURKROW
 	end_grass_wildmons
 
 	db -1 ; end

@@ -47,7 +47,7 @@ Route102KidText:
 	
 Route102OldmanScript:
 	checkevent EVENT_ROUTE102_OLD_MAN
-	iftrue .NoOldMan
+	iffalse .NoOldMan
 	sjump OldManAdvice
 	
 .NoOldMan
@@ -56,7 +56,7 @@ Route102OldmanScript:
 	writetext OldManText
 	promptbutton
 	closetext
-	clearevent EVENT_ROUTE102_OLD_MAN
+	setevent EVENT_ROUTE102_OLD_MAN
 	end
 	
 OldManText:
@@ -278,4 +278,4 @@ Route102_MapEvents:
 	
 	def_object_events
 	object_event 21, 6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 4, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route102KidScript, -1
-	object_event 18, 17, SPRITE_ELDER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route102OldmanScript, -1
+	object_event 18, 17, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route102OldmanScript, -1

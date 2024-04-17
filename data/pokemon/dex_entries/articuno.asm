@@ -1,10 +1,10 @@
-	db "SLAPSTICK@" ; species name
+	db "POLYHEDRON@" ; species name
 	dw 607, 3318 ; height, weight
 
-	db   "It will never"
-	next "allow a child to"
-	next "come to harm."
+	db   "Each of its sides"
+	next "is a different"
+	next "shade of pink."
 
-	page "Funny and noble,"
-	next "it's loved by kids"
-	next "and parents.@"
+	page "Everyone has a"
+	next "different favourite"
+	next "side.@"

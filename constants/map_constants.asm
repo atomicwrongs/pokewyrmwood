@@ -94,6 +94,11 @@ ENDM
 	map_const CHAMOMILE_LIBRARY,                              8, 8 ;9
 	map_const CHAMOMILE_TRADEHOUSE,                           8, 8 ;10
 	map_const CHAMOMILE_GROUNDSKEEPER,                        4, 4 ;11
+	map_const CHAMOMILE_GYM,								  5, 10 ;12
+	endgroup
+	
+	newgroup TAURIC													; 8
+	map_const ROUTE_103,                                     15, 15 ; 1
 	endgroup
 
-DEF NUM_MAP_GROUPS EQU const_value ; 7
+DEF NUM_MAP_GROUPS EQU const_value ; 8

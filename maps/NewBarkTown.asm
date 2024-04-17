@@ -146,6 +146,7 @@ DidntChooseStarterScript:
 
 RivalFightScript:
 	applymovement LITTLESAGE_NIA, NiaTurnLeftMovement
+	turnobject LITTLESAGE_LEE, UP
 	opentext
 	writetext YouShouldFightText
 	closetext
@@ -201,6 +202,7 @@ RivalFightScript:
 	setscene SCENE_LITTLESAGE_NOOP
 	setflag ENGINE_POKEDEX
 	special HealParty
+	addcellnum PHONE_NIA
 	end
 	
 TakeLullabearText:
@@ -244,7 +246,7 @@ NiaSaysHi:
 	para "... Lee, come"
 	line "on."
 
-	para "LIAM: ... ..."
+	para "LEE: ... ..."
 	line "... hey."
 	
 	para "NIA: Well, um..."
@@ -317,14 +319,13 @@ LittlesageRivalText_Win:
 	cont "totally try it"
 	cont "too!"
 	
-	para "LEE: What? I-"
-	line "don't you dare!"
-	cont "Why don't you"
+	para "LEE: Wh- hey!"
+	line "Why don't you"
 	cont "try catching all"
 	cont "the #MON in"
 	cont "NOMAIA instead"
 	cont "of getting in"
-	cont "my way?!"
+	cont "my way?"
 	
 	para "NIA: Lee, don't"
 	line "be mean! It'll"
@@ -442,12 +443,12 @@ WalkUpToPokeballsMovement:
 	step_end
 	
 NiaLeavesMovement:
-	big_step DOWN
-	big_step DOWN
-	big_step DOWN
-	big_step DOWN
-	big_step DOWN
-	big_step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
 	step_end
 	
 NiaTurnLeftMovement:
@@ -504,7 +505,7 @@ NewBarkTown_MapEvents:
 	object_event  5, 10, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LittlesageBoyScript, -1
 	object_event  6, 10, SPRITE_CHARMANDER, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LittlesageCharScript, -1
 	object_event 10, 6, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LittlesageNiaScript, EVENT_LITTLESAGE_BIRTHDAY
-	object_event 8, 7, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LittlesageLeeScript, EVENT_LITTLESAGE_BIRTHDAY
+	object_event 8, 7, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LittlesageLeeScript, EVENT_LITTLESAGE_BIRTHDAY
 	object_event 7, 3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LullabearBallScript, EVENT_LULLABALL
 	object_event 8, 3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ReptripBallScript, EVENT_REPTRIPBALL
 	object_event 9, 3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PupageBallScript, EVENT_PUPAGEBALL

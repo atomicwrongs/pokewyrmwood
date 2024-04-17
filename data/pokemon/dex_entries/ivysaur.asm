@@ -1,10 +1,9 @@
-	db "SCALY@" ; species name
+	db "SNOWGLOBE@" ; species name
 	dw 200, 655 ; height, weight
 
-	db   "It never turns its"
-	next "bsck on an enemy,"
-	next "intimidating them"
+	db   "When the snow"
+	next "inside its globe"
 
-	page "by clanging its"
-	next "scales against"
-	next "boulders.@"
+	page "begins to flurry,"
+	next "it is preparing"
+	next "to hatch.@"

@@ -26,11 +26,6 @@ _TitleScreen:
 	ld bc, 20 * BG_MAP_WIDTH
 	xor a
 	call ByteFill
-	
-; Decompress running Suicune gfx
-	ld hl, TitleSuicuneGFX
-	ld de, vTiles1
-	call Decompress
 
 ; Fill tile palettes:
 
@@ -39,7 +34,7 @@ _TitleScreen:
 ; line 0 (copyright)
 	hlbgcoord 0, 0, vBGMap1
 	ld bc, BG_MAP_WIDTH
-	ld a, 7; palette
+	ld a, 7 ; palette
 	call ByteFill
 
 ; BG Map 0:
@@ -47,35 +42,39 @@ _TitleScreen:
 ; Apply logo gradient:
 
 ; lines 3-4
-	hlbgcoord 0, 3
-	ld bc, 3 * BG_MAP_WIDTH
-	ld a, 2
+	hlbgcoord 0, 0
+	ld bc, 2 * BG_MAP_WIDTH
+	ld a, 1
 	call ByteFill
 ; line 5
-	hlbgcoord 0, 6
+	hlbgcoord 0, 2
+	ld bc, 2 * BG_MAP_WIDTH
+	ld a, 2
+	call ByteFill
+; line 6
+	hlbgcoord 0, 4
 	ld bc, 2 * BG_MAP_WIDTH
 	ld a, 3
 	call ByteFill
-; line 6
-	hlbgcoord 0, 8
-	ld bc, BG_MAP_WIDTH
+; line 7
+	hlbgcoord 0, 6
+	ld bc, 3 * BG_MAP_WIDTH
 	ld a, 4
 	call ByteFill
-; line 7
+; lines 8-9
 	hlbgcoord 0, 9
-	ld bc, BG_MAP_WIDTH
+	ld bc, 3 * BG_MAP_WIDTH
 	ld a, 5
 	call ByteFill
-; lines 8-9
-	hlbgcoord 0, 10
-	ld bc, 3 * BG_MAP_WIDTH
+; clouds
+	hlbgcoord 0, 12
+	ld bc, 2 * BG_MAP_WIDTH
 	ld a, 6
 	call ByteFill
-
-; Suicune gfx
-	hlbgcoord 0, 12
-	ld bc, 6 * BG_MAP_WIDTH ; the rest of the screen
-	ld a, 0 | VRAM_BANK_1
+;subcloud
+	hlbgcoord 0, 14
+	ld bc, 5 * BG_MAP_WIDTH
+	ld a, 7
 	call ByteFill
 
 ; Back to VRAM bank 0
@@ -112,10 +111,6 @@ _TitleScreen:
 	ld e, 16
 	call DrawTitleGraphic
 
-; Initialize running Suicune?
-	ld d, $0
-	call LoadSuicuneFrame
-
 ; Initialize background crystal
 	call InitializeBackground
 
@@ -150,13 +145,13 @@ _TitleScreen:
 ; (This part is actually totally pointless, you can't
 ;  see anything until these values are overwritten!)
 
-	ld b, 80 / 2 ; alternate for 80 lines
+	ld b, 80 / 20 ; alternate for 80 lines
 	ld hl, wLYOverrides
 .loop
 ; $00 is the middle position
-	ld [hl], +112 ; coming from the left
+	ld [hl], +0 ; coming from the left
 	inc hl
-	ld [hl], -112 ; coming from the right
+	ld [hl], -0 ; coming from the right
 	inc hl
 	dec b
 	jr nz, .loop
@@ -199,71 +194,12 @@ _TitleScreen:
 	ldh [hBGMapMode], a
 
 	xor a
-	ld [wSuicuneFrame], a
 
 ; Play starting sound effect
 	call SFXChannelsOff
 	ld de, SFX_TITLE_SCREEN_ENTRANCE
 	call PlaySFX
 
-	ret
-
-SuicuneFrameIterator:
-	ld hl, wSuicuneFrame
-	ld a, [hl]
-	ld c, a
-	inc [hl]
-
-; Only do this once every eight frames
-	and %111
-	ret nz
-
-	ld a, c
-	and %11000
-	sla a
-	swap a
-	ld e, a
-	ld d, 0
-	ld hl, .Frames
-	add hl, de
-	ld d, [hl]
-	xor a
-	ldh [hBGMapMode], a
-	call LoadSuicuneFrame
-	ld a, $1
-	ldh [hBGMapMode], a
-	ld a, $3
-	ldh [hBGMapThird], a
-	ret
-
-.Frames:
-	db $80 ; vTiles3 tile $80
-	db $88 ; vTiles3 tile $88
-	db $00 ; vTiles5 tile $00
-	db $08 ; vTiles5 tile $08
-
-LoadSuicuneFrame:
-	hlcoord 6, 12
-	ld b, 6
-.bgrows
-	ld c, 8
-.col
-	ld a, d
-	ld [hli], a
-	inc d
-	dec c
-	jr nz, .col
-	ld a, SCREEN_WIDTH - 8
-	add l
-	ld l, a
-	ld a, 0
-	adc h
-	ld h, a
-	ld a, 8
-	add d
-	ld d, a
-	dec b
-	jr nz, .bgrows
 	ret
 
 DrawTitleGraphic:

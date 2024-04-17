@@ -1,10 +1,10 @@
-	db "SCALY@" ; species name
+	db "GLOBE@" ; species name
 	dw 503, 1724 ; height, weight
 
-	db   "Ancient warriors"
-	next "used its scales"
-	next "for armour."
+	db   "A single firm"
+	next "shake of its orb"
+	next "evokes blizzards"
 
-	page "It battles vali-"
-	next "antly with its"
-	next "scaly fists.@"
+	page "that can blanket"
+	next "cities and last"
+	next "for weeks.@"

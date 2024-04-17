@@ -166,7 +166,7 @@ DoNPCTrade:
 	ld e, NPCTRADE_DIALOG
 	call GetTradeAttr
 	ld a, [hl]
-	cp TRADE_DIALOGSET_GIRL
+	cp TRADE_DIALOGSET_JEANLUC
 	ld a, CAUGHT_BY_GIRL
 	jr c, .okay
 	ld a, CAUGHT_BY_BOY
@@ -189,7 +189,7 @@ DoNPCTrade:
 	ld e, NPCTRADE_DIALOG
 	call GetTradeAttr
 	ld a, [hl]
-	cp TRADE_DIALOGSET_GIRL
+	cp TRADE_DIALOGSET_JEANLUC
 	ld b, CAUGHT_BY_UNKNOWN
 	jr c, .incomplete
 	ld b, CAUGHT_BY_GIRL
@@ -408,33 +408,28 @@ TradeTexts:
 ; TRADE_DIALOG_INTRO
 	dw NPCTradeIntroText1
 	dw NPCTradeIntroText2
-	dw NPCTradeIntroText2
 	dw NPCTradeIntroText3
-	dw NPCTradeIntroText5
+	dw NPCTradeIntroText4
 ; TRADE_DIALOG_CANCEL
 	dw NPCTradeCancelText1
 	dw NPCTradeCancelText2
-	dw NPCTradeCancelText2
 	dw NPCTradeCancelText3
-	dw NPCTradeCancelText5
+	dw NPCTradeCancelText4
 ; TRADE_DIALOG_WRONG
 	dw NPCTradeWrongText1
 	dw NPCTradeWrongText2
-	dw NPCTradeWrongText2
 	dw NPCTradeWrongText3
-	dw NPCTradeWrongText5
+	dw NPCTradeWrongText4
 ; TRADE_DIALOG_COMPLETE
 	dw NPCTradeCompleteText1
 	dw NPCTradeCompleteText2
-	dw NPCTradeCompleteText4
 	dw NPCTradeCompleteText3
-	dw NPCTradeCompleteText5
+	dw NPCTradeCompleteText4
 ; TRADE_DIALOG_AFTER
 	dw NPCTradeAfterText1
 	dw NPCTradeAfterText2
-	dw NPCTradeAfterText4
 	dw NPCTradeAfterText3
-	dw NPCTradeAfterText5
+	dw NPCTradeAfterText4
 
 NPCTradeCableText:
 	text_far _NPCTradeCableText
@@ -514,30 +509,22 @@ NPCTradeAfterText3:
 	text_far _NPCTradeAfterText3
 	text_end
 
-NPCTradeCompleteText4:
-	text_far _NPCTradeCompleteText4
-	text_end
-
-NPCTradeAfterText4:
-	text_far _NPCTradeAfterText4
-	text_end
-
-NPCTradeCompleteText5:
-	text_far _NPCTradeCompleteText5
-	text_end
-
-NPCTradeAfterText5:
-	text_far _NPCTradeAfterText5
-	text_end
-
-NPCTradeIntroText5:
+NPCTradeIntroText4:
 	text_far _NPCTradeIntroText5
 	text_end
 
-NPCTradeCancelText5:
+NPCTradeCancelText4:
 	text_far _NPCTradeCancelText5
 	text_end
 
-NPCTradeWrongText5:
+NPCTradeWrongText4:
 	text_far _NPCTradeWrongText5
+	text_end
+
+NPCTradeCompleteText4:
+	text_far _NPCTradeCompleteText5
+	text_end
+
+NPCTradeAfterText4:
+	text_far _NPCTradeAfterText5
 	text_end

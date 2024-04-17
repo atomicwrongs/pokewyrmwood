@@ -1,10 +1,10 @@
-	db "RIVER CRAB@" ; species name
+	db "METAL CRAB@" ; species name
 	dw 104, 140 ; height, weight
 
-	db   "If it is unable"
-	next "to find food, it"
-	next "will absorb"
+	db   "It shovels sand"
+	next "into its mouth"
+	next "with its claw."
 
-	page "nutrients by"
-	next "swallowing a"
-	next "mouthful of sand.@"
+	page "It eats any metal"
+	next "scraps, leaving a"
+	next "clean beach behind.@"

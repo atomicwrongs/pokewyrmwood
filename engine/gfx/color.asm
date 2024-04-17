@@ -1,7 +1,7 @@
 INCLUDE "engine/gfx/sgb_layouts.asm"
 
 DEF SHINY_ATK_MASK EQU %0010
-DEF SHINY_DEF_DV EQU %0010
+DEF SHINY_DEF_DV EQU 10
 DEF SHINY_SPD_DV EQU 10
 DEF SHINY_SPC_DV EQU 10
 
@@ -18,9 +18,10 @@ CheckShininess:
 	jr z, .not_shiny
 
 ; Defense
-	ld a, [hl]
-	and SHINY_DEF_DV << 4
-	jr z, .not_shiny
+	ld a, [hli]
+	and %1111
+	cp SHINY_DEF_DV
+	jr nz, .not_shiny
 
 ; Speed
 	ld a, [hl]

@@ -125,3 +125,9 @@ ChamomileApartments1_Blocks:
 ChamomileGroundskeeper_Blocks:
 	INCBIN "maps/ChamomileGroundskeeper.blk"
 
+ChamomileGym_Blocks:
+	INCBIN "maps/ChamomileGym.blk"
+
+Route103_Blocks:
+	INCBIN "maps/Route103.blk"
+

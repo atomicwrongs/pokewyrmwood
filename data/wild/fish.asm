@@ -72,17 +72,17 @@ FishGroups:
 .Pond_Old:
 	db  70 percent + 1, MAGIKARP,   10
 	db  85 percent + 1, MAGIKARP,   10
-	db 100 percent,     UMBRAELLA,    10
+	db 100 percent,     SPLASHFUL,    10
 .Pond_Good:
 	db  35 percent,     MAGIKARP,   20
-	db  70 percent,     UMBRAELLA,    20
-	db  90 percent + 1, UMBRAELLA,    20
+	db  70 percent,     SPLASHFUL,    20
+	db  90 percent + 1, SPLASHFUL,    20
 	db 100 percent,     time_group 6
 .Pond_Super:
-	db  40 percent,     UMBRAELLA,    40
+	db  40 percent,     SPLASHFUL,    40
 	db  70 percent,     time_group 7
 	db  90 percent + 1, MAGIKARP,   40
-	db 100 percent,     UMBRAELLA,    40
+	db 100 percent,     SPLASHFUL,    40
 
 .Dratini_Old:
 	db  70 percent + 1, MAGIKARP,   10
@@ -195,14 +195,14 @@ FishGroups:
 .Remoraid_Old:
 	db  70 percent + 1, MAGIKARP,   10
 	db  85 percent + 1, MAGIKARP,   10
-	db 100 percent,     UMBRAELLA,    10
+	db 100 percent,     SPLASHFUL,    10
 .Remoraid_Good:
 	db  35 percent,     MAGIKARP,   20
-	db  70 percent,     UMBRAELLA,    20
-	db  90 percent + 1, UMBRAELLA,    20
+	db  70 percent,     SPLASHFUL,    20
+	db  90 percent + 1, SPLASHFUL,    20
 	db 100 percent,     time_group 6
 .Remoraid_Super:
-	db  40 percent,     UMBRAELLA,    40
+	db  40 percent,     SPLASHFUL,    40
 	db  70 percent,     time_group 7
 	db  90 percent + 1, MAGIKARP,   40
 	db 100 percent,     FINNEON,   40
@@ -215,8 +215,8 @@ TimeFishGroups:
 	db SHELLDER,   40,  SHELLDER,   40 ; 3
 	db CORPHISH,    20,  CORPHISH,    20 ; 4
 	db CORPHISH,    40,  CORPHISH,    40 ; 5
-	db UMBRAELLA,    20,  UMBRAELLA,    20 ; 6
-	db UMBRAELLA,    40,  UMBRAELLA,    40 ; 7
+	db SPLASHFUL,    20,  SPLASHFUL,    20 ; 6
+	db SPLASHFUL,    40,  SPLASHFUL,    40 ; 7
 	db BREAMING,    20,  BREAMING,    20 ; 8
 	db BREAMING,    40,  BREAMING,    40 ; 9
 	db VELUZA,   20,  VELUZA,   20 ; 10

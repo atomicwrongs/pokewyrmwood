@@ -12,9 +12,7 @@ _OakText7::
 	cont "than anticipated."
 
 	para "Make the most of"
-	line "it."
-	
-	para "For me..."
+	line "it. Please."
 	done
 
 _ClockTimeMayBeWrongText::
@@ -1398,19 +1396,14 @@ _ItemUsedText::
 	text "."
 	done
 
-_ItemGotOnText::
-	text "<PLAYER> got on the@"
-	text_low
-	text_ram wStringBuffer2
-	text "."
+_ExpShareToggleOn::
+	text "The EXP SHARE was"
+	line "switched on."
 	prompt
 
-_ItemGotOffText::
-	text "<PLAYER> got off@"
-	text_low
-	text "the @"
-	text_ram wStringBuffer2
-	text "."
+_ExpShareToggleOff::
+	text "The EXP SHARE was"
+	line "switched off."
 	prompt
 
 _KnowsMoveText::

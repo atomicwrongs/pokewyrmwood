@@ -2055,3 +2055,10 @@ Sketch:
 	doturn
 	sketch
 	endmove
+	
+Hail:
+	checkobedience
+	usedmovetext
+	doturn
+	starthail
+	endmove

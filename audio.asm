@@ -169,3 +169,5 @@ INCLUDE "audio/cries.asm"
 SECTION "New Music", ROMX
 
 INCLUDE "audio/music/treehollow.asm"
+INCLUDE "audio/music/requiem.asm"
+INCLUDE "audio/music/waauh.asm"

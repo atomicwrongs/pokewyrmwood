@@ -15,4 +15,5 @@ PhoneContacts:
 	phone TRAINER_NONE, PHONECONTACT_ELM,      NONE,                      ANYTIME, ElmPhoneCalleeScript,     0,       ElmPhoneCallerScript
 	phone TRAINER_NONE, PHONECONTACT_NIA,      N_A,                       ANYTIME, NiaPhoneCalleeScript,     ANYTIME, NiaPhoneCallerScript
 	phone TRAINER_NONE, PHONECONTACT_BILL,     N_A,                       ANYTIME, BillPhoneCalleeScript,    0,       BillPhoneCallerScript
+	phone FALKNER,      FALKNER1,              CHAMOMILE_GYM,             ANYTIME, MinaPhoneCalleeScript,    ANYTIME, MinaPhoneCallerScript
 	assert_table_length NUM_PHONE_CONTACTS + 1

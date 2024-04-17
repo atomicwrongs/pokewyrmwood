@@ -636,17 +636,9 @@ OakSpeech:
 	farcall InitClock
 	call RotateFourPalettesLeft
 	call ClearTilemap
-
-	ld de, MUSIC_ROUTE_30
+	
+	ld de, MUSIC_REQUIEM
 	call PlayMusic
-
-	call RotateFourPalettesRight
-	call RotateThreePalettesRight
-	xor a
-	ld [wCurPartySpecies], a
-	ld a, POKEMON_PROF
-	ld [wTrainerClass], a
-	call Intro_PrepTrainerPic
 
 	ld b, SCGB_TRAINER_OR_MON_FRONTPIC_PALS
 	call GetSGBLayout
@@ -654,42 +646,10 @@ OakSpeech:
 
 	ld hl, OakText1
 	call PrintText
-	call RotateThreePalettesRight
-	call ClearTilemap
-
-	ld a, RAVETILE
-	ld [wCurSpecies], a
-	ld [wCurPartySpecies], a
-	call GetBaseData
-
-	hlcoord 6, 4
-	call PrepMonFrontpic
-
-	xor a
-	ld [wTempMonDVs], a
-	ld [wTempMonDVs + 1], a
-
-	ld b, SCGB_TRAINER_OR_MON_FRONTPIC_PALS
-	call GetSGBLayout
-	call Intro_WipeInFrontpic
-
 	ld hl, OakText2
 	call PrintText
 	ld hl, OakText4
 	call PrintText
-	call RotateThreePalettesRight
-	call ClearTilemap
-
-	xor a
-	ld [wCurPartySpecies], a
-	ld a, POKEMON_PROF
-	ld [wTrainerClass], a
-	call Intro_PrepTrainerPic
-
-	ld b, SCGB_TRAINER_OR_MON_FRONTPIC_PALS
-	call GetSGBLayout
-	call Intro_RotatePalettesLeftFrontpic
-
 	ld hl, OakText5
 	call PrintText
 	call RotateThreePalettesRight
@@ -716,12 +676,7 @@ OakText1:
 
 OakText2:
 	text_far _OakText2
-	text_asm
-	ld a, RAVETILE
-	call PlayMonCry
-	call WaitSFX
-	ld hl, OakText3
-	ret
+	text_end
 
 OakText3:
 	text_far _OakText3
@@ -1040,7 +995,6 @@ RunTitleScreen:
 	bit 7, a
 	jr nz, .done_title
 	call TitleScreenScene
-	farcall SuicuneFrameIterator
 	call DelayFrame
 	and a
 	ret
@@ -1123,7 +1077,7 @@ TitleScreenEntrance:
 	ldh [hLCDCPointer], a
 
 ; Play the title screen music.
-	ld de, MUSIC_TITLE
+	ld de, MUSIC_WAUUH
 	call PlayMusic
 
 	ld a, $88

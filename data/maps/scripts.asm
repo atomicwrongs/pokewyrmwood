@@ -49,6 +49,7 @@ INCLUDE "maps/ChamomileGroundskeeper.asm"
 
 
 SECTION "Map Scripts 6", ROMX
+INCLUDE "maps/Route103.asm"
 
 
 SECTION "Map Scripts 7", ROMX
@@ -118,3 +119,4 @@ INCLUDE "maps/TarragonTownPokemart.asm"
 INCLUDE "maps/ChamomilePark.asm"
 INCLUDE "maps/ChamomileGymOutside.asm"
 INCLUDE "maps/BilberryAriadosDen.asm"
+INCLUDE "maps/ChamomileGym.asm"

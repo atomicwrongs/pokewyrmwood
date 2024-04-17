@@ -1687,14 +1687,22 @@ HandleWeather:
 
 	ld hl, wWeatherCount
 	dec [hl]
-	jr z, .ended
+	jr nz, .continues
 
+; ended
+	ld hl, .WeatherEndedMessages
+	call .PrintWeatherMessage
+	xor a
+	ld [wBattleWeather], a
+	ret
+
+.continues
 	ld hl, .WeatherMessages
 	call .PrintWeatherMessage
 
 	ld a, [wBattleWeather]
 	cp WEATHER_SANDSTORM
-	ret nz
+	jr nz, .check_hail
 
 	ldh a, [hSerialConnectionStatus]
 	cp USING_EXTERNAL_CLOCK
@@ -1751,12 +1759,59 @@ HandleWeather:
 	ld hl, SandstormHitsText
 	jp StdBattleTextbox
 
-.ended
-	ld hl, .WeatherEndedMessages
-	call .PrintWeatherMessage
+.check_hail
+	ld a, [wBattleWeather]
+	cp WEATHER_HAIL
+	ret nz
+
+	ldh a, [hSerialConnectionStatus]
+	cp USING_EXTERNAL_CLOCK
+	jr z, .enemy_first_hail
+
+; player first
+	call SetPlayerTurn
+	call .HailDamage
+	call SetEnemyTurn
+	jr .HailDamage
+
+.enemy_first_hail
+	call SetEnemyTurn
+	call .HailDamage
+	call SetPlayerTurn
+
+.HailDamage:
+	ld a, BATTLE_VARS_SUBSTATUS3
+	call GetBattleVar
+	bit SUBSTATUS_UNDERGROUND, a
+	ret nz
+
+	ld hl, wBattleMonType1
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .ok1
+	ld hl, wEnemyMonType1
+.ok1
+	ld a, [hli]
+	cp ICE
+	ret z
+
+	ld a, [hl]
+	cp ICE
+	ret z
+	
+	call SwitchTurnCore
 	xor a
-	ld [wBattleWeather], a
-	ret
+	ld [wNumHits], a
+	ld de, ANIM_IN_HAIL
+	call Call_PlayBattleAnim
+	call SwitchTurnCore
+
+	call GetSixteenthMaxHP
+	call SubtractHPFromUser
+
+	ld hl, PeltedByHailText
+	jp StdBattleTextbox
+
 
 .PrintWeatherMessage:
 	ld a, [wBattleWeather]
@@ -1775,12 +1830,14 @@ HandleWeather:
 	dw BattleText_RainContinuesToFall
 	dw BattleText_TheSunlightIsStrong
 	dw BattleText_TheSandstormRages
+	dw BattleText_HailContinuesToFall
 
 .WeatherEndedMessages:
 ; entries correspond to WEATHER_* constants
 	dw BattleText_TheRainStopped
 	dw BattleText_TheSunlightFaded
 	dw BattleText_TheSandstormSubsided
+	dw BattleText_TheHailStopped
 
 SubtractHPFromTarget:
 	call SubtractHP
@@ -2150,96 +2207,27 @@ UpdateBattleStateAndExperienceAfterEnemyFaint:
 	and BATTLERESULT_BITMASK
 	ld [wBattleResult], a ; WIN
 	; fallthrough
-ApplyExperienceAfterEnemyCaught:
-	call IsAnyMonHoldingExpShare
-	jr z, .skip_exp
-	ld hl, wEnemyMonBaseStats
-	ld b, wEnemyMonEnd - wEnemyMonBaseStats
-.loop
-	srl [hl]
-	inc hl
-	dec b
-	jr nz, .loop
-
-.skip_exp
-	ld hl, wEnemyMonBaseStats
-	ld de, wBackupEnemyMonBaseStats
-	ld bc, wEnemyMonEnd - wEnemyMonBaseStats
-	call CopyBytes
-	xor a
-	ld [wGivingExperienceToExpShareHolders], a
+	; Preserve bits of non-fainted participants
+	ld a, [wBattleParticipantsNotFainted]
+	ld d, a
+	push de
 	call GiveExperiencePoints
-	call IsAnyMonHoldingExpShare
+	pop de
+	; If Exp. Share is ON, give 50% EXP to non-participants
+	ld a, [wExpShareToggle]
+	and a
 	ret z
-
+	ld hl, wEnemyMonBaseExp
+	srl [hl]
+	ApplyExperienceAfterEnemyCaught:
 	ld a, [wBattleParticipantsNotFainted]
 	push af
 	ld a, d
+	xor %00111111
 	ld [wBattleParticipantsNotFainted], a
-	ld hl, wBackupEnemyMonBaseStats
-	ld de, wEnemyMonBaseStats
-	ld bc, wEnemyMonEnd - wEnemyMonBaseStats
-	call CopyBytes
-	ld a, $1
-	ld [wGivingExperienceToExpShareHolders], a
 	call GiveExperiencePoints
 	pop af
 	ld [wBattleParticipantsNotFainted], a
-	ret
-
-IsAnyMonHoldingExpShare:
-	ld a, [wPartyCount]
-	ld b, a
-	ld hl, wPartyMon1
-	ld c, 1
-	ld d, 0
-.loop
-	push hl
-	push bc
-	ld bc, MON_HP
-	add hl, bc
-	ld a, [hli]
-	or [hl]
-	pop bc
-	pop hl
-	jr z, .next
-
-	push hl
-	push bc
-	ld bc, MON_ITEM
-	add hl, bc
-	pop bc
-	ld a, [hl]
-	pop hl
-
-	cp EXP_SHARE
-	jr nz, .next
-	ld a, d
-	or c
-	ld d, a
-
-.next
-	sla c
-	push de
-	ld de, PARTYMON_STRUCT_LENGTH
-	add hl, de
-	pop de
-	dec b
-	jr nz, .loop
-
-	ld a, d
-	ld e, 0
-	ld b, PARTY_LENGTH
-.loop2
-	srl a
-	jr nc, .okay
-	inc e
-
-.okay
-	dec b
-	jr nz, .loop2
-	ld a, e
-	and a
 	ret
 
 StopDangerSound:
@@ -2558,10 +2546,6 @@ PlayVictoryMusic:
 	ld a, [wBattleMode]
 	dec a
 	jr nz, .trainer_victory
-	push de
-	call IsAnyMonHoldingExpShare
-	pop de
-	jr nz, .play_music
 	ld hl, wPayDayMoney
 	ld a, [hli]
 	or [hl]
@@ -6356,7 +6340,6 @@ LoadEnemyMon:
 	ld a, [wTempEnemyMonSpecies]
 	ld [wNamedObjectIndex], a
 
-	call GetPokemonName
 
 ; Did we catch it?
 	ld a, [wBattleMode]
@@ -6364,7 +6347,23 @@ LoadEnemyMon:
 	ret z
 
 ; Update enemy nickname
+	ld a, [wBattleMode]
+	dec a ; WILD_BATTLE?
+	jr z, .no_nickname
+	ld a, [wOtherTrainerType]
+	bit TRAINERTYPE_NICKNAME_F, a
+	jr z, .no_nickname
+	ld a, [wCurPartyMon]
+	ld hl, wOTPartyMonNicknames
+	ld bc, MON_NAME_LENGTH
+	call AddNTimes
+	ld a, [hl]
+	cp "@"
+	jr nz, .got_nickname
+.no_nickname
+	call GetPokemonName
 	ld hl, wStringBuffer1
+.got_nickname
 	ld de, wEnemyMonNickname
 	ld bc, MON_NAME_LENGTH
 	call CopyBytes
@@ -6890,12 +6889,12 @@ _BattleRandom::
 	ld b, 10 ; number of seeds
 
 ; Generate next number in the sequence for each seed
-; a[n+1] = (a[n] * 5 + 1) % 256
+; a[n1] = (a[n] * 5 + 1) % 256
 .loop
 	; get last #
 	ld a, [hl]
 
-	; a * 5 + 1
+	; a * 5  1
 	ld c, a
 	add a
 	add a
@@ -6955,8 +6954,6 @@ GiveExperiencePoints:
 	ld a, [wInBattleTowerBattle]
 	bit 0, a
 	ret nz
-
-	call .EvenlyDivideExpAmongParticipants
 	xor a
 	ld [wCurPartyMon], a
 	ld bc, wPartyMon1Species
@@ -7324,40 +7321,6 @@ GiveExperiencePoints:
 
 .done
 	jp ResetBattleParticipants
-
-.EvenlyDivideExpAmongParticipants:
-; count number of battle participants
-	ld a, [wBattleParticipantsNotFainted]
-	ld b, a
-	ld c, PARTY_LENGTH
-	ld d, 0
-.count_loop
-	xor a
-	srl b
-	adc d
-	ld d, a
-	dec c
-	jr nz, .count_loop
-	cp 2
-	ret c
-
-	ld [wTempByteValue], a
-	ld hl, wEnemyMonBaseStats
-	ld c, wEnemyMonEnd - wEnemyMonBaseStats
-.base_stat_division_loop
-	xor a
-	ldh [hDividend + 0], a
-	ld a, [hl]
-	ldh [hDividend + 1], a
-	ld a, [wTempByteValue]
-	ldh [hDivisor], a
-	ld b, 2
-	call Divide
-	ldh a, [hQuotient + 3]
-	ld [hli], a
-	dec c
-	jr nz, .base_stat_division_loop
-	ret
 
 BoostExp:
 ; Multiply experience by 1.5x

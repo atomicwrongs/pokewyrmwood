@@ -3,6 +3,7 @@
 	const PHONE_ELM
 	const PHONE_NIA
 	const PHONE_BILL
+	const PHONE_MINA
 DEF NUM_PHONE_CONTACTS EQU const_value - 1
 
 ; SpecialPhoneCallList indexes (see data/phone/special_calls.asm)

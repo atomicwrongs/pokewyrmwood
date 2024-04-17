@@ -164,7 +164,6 @@ TestCrystalTitleScreen: ; unreferenced
 	ld b, a
 	and A_BUTTON
 	jr nz, .done
-	call SuicuneFrameIterator
 	call DelayFrame
 	jr .loop
 .done

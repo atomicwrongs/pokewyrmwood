@@ -154,7 +154,7 @@ _CardFolderOpenText::
 	text_end
 
 _OakTimeWokeUpText::
-	text "I see."
+	text ""
 	done
 
 _OakTimeWhatTimeIsItText::
@@ -174,7 +174,7 @@ _OakTimeHowManyMinutesText::
 	done
 
 _OakTimeWhoaMinutesText::
-	text "So it's @"
+	text "So it's  @"
 	text_end
 
 _OakTimeMinutesQuestionMarkText::
@@ -183,17 +183,17 @@ _OakTimeMinutesQuestionMarkText::
 
 _OakTimeOversleptText::
 	text "..."
-	line "Thank you."
+	para "I see."
 	done
 
 _OakTimeYikesText::
 	text "..."
-	line "Rest eludes you."
+	para "dusk waits."
 	done
 
 _OakTimeSoDarkText::
-	text "!"
-	line "A darker hour."
+	text "..."
+	para "still dark."
 	done
 
 _OakTimeWhatDayIsItText::
@@ -1514,17 +1514,6 @@ _NPCTradeAfterText3::
 	line "so cute!"
 	done
 
-_NPCTradeCompleteText4::
-	text "Uh? What happened?"
-	done
-
-_NPCTradeAfterText4::
-	text "Trading is so odd…"
-
-	para "I still have a lot"
-	line "to learn about it."
-	done
-
 _NPCTradeIntroText5::
 	text "Excuzes-moi."
 	line "I am looking for"
@@ -1533,19 +1522,14 @@ _NPCTradeIntroText5::
 	cont "how it is called."
 
 	para "It is green, and"
-	line "small, and quite"
-	cont "cute. It has"
+	line "cute. It has"
 	cont "a little face"
 	cont "on its back."
-
-	para "Oh, and a small"
-	line "horn on its"
-	cont "head."
 
 	para "If you have one,"
 	line "I will give you"
 	cont "a #MON from"
-	cont "my home country!"
+	cont "my home country."
 	done
 
 _NPCTradeCancelText5::
@@ -1559,8 +1543,6 @@ _NPCTradeWrongText5::
 
 	para "I think it has"
 	line "many stripy legs."
-	cont "How is it"
-	cont "called..."
 	done
 
 _NPCTradeCompleteText5::

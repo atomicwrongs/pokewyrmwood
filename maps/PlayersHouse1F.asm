@@ -55,7 +55,6 @@ PhoneMainScript:
 
 .FinishPhone:
 	closetext
-	addcellnum PHONE_NIA
 	end
 
 PokegearName:

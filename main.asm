@@ -308,8 +308,11 @@ SECTION "Phone Scripts 1", ROMX
 
 INCLUDE "engine/phone/scripts/nia_caller.asm"
 INCLUDE "engine/phone/scripts/bill.asm"
+INCLUDE "engine/phone/scripts/mina_callee.asm"
+INCLUDE "engine/phone/scripts/mina_caller.asm"
 
 SECTION "Phone Text", ROMX
+INCLUDE "data/phone/text/mina_caller.asm"
 
 
 SECTION "bank2E", ROMX

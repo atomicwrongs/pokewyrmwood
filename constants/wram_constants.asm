@@ -67,7 +67,7 @@ DEF GBPRINTER_DARKEST  EQU $7f
 
 ; wOptions2::
 	const_def
-	const MENU_ACCOUNT ; 0
+	const MENU_CLOCK ; 0
 
 ; wWalkingDirection::
 	const_def -1
@@ -258,6 +258,7 @@ DEF PLAYER_BIKE      EQU 1
 DEF PLAYER_SKATE     EQU 2
 DEF PLAYER_SURF      EQU 4
 DEF PLAYER_SURF_PIKA EQU 8
+DEF PLAYER_RUN		 EQU 16
 
 ; wCelebiEvent::
 DEF CELEBIEVENT_FOREST_IS_RESTLESS_F EQU 2

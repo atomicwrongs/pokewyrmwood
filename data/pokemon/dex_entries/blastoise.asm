@@ -1,10 +1,10 @@
-	db "TUMBLING@" ; species name
+	db "CUBE@" ; species name
 	dw 307, 882 ; height, weight
 
-	db   "Though it falls"
-	next "over often, it's"
-	next "very coordinated."
+	db   "Some are turned"
+	next "off by its perf-"
+	next "ectly cubic shape."
 
-	page "Every tumble is"
-	next "part of a chore-"
-	next "ographed routine.@"
+	page "Despite this, it's"
+	next "popular among some"
+	next "fan groups.@"

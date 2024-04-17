@@ -1,10 +1,10 @@
-	db "SCALY@" ; species name
+	db "GLOBE@" ; species name
 	dw 311, 1036 ; height, weight
 
-	db   "It rhythmically"
-	next "clangs its scales"
-	next "before battle."
+	db   "Pondering its orb,"
+	next "it summons a"
+	next "wintery wrath."
 
-	page "At the height of"
-	next "the rhythm, it"
-	next "fiercely attacks.@"
+	page "It is normally"
+	next "reclusive and peace-"
+	next "ful, however.@"

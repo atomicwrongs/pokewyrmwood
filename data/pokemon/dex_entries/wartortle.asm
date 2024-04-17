@@ -1,10 +1,10 @@
-	db "TUMBLING@" ; species name
+	db "SQUARE@" ; species name
 	dw 106, 93 ; height, weight
 
-	db   "Many people find"
-	next "its clumsiness"
-	next "to be endearing."
+	db   "It's found in"
+	next "urban areas, but"
+	next "isn't considered a"
 
-	page "It cherishes"
-	next "every smile it"
-	next "sees.@"
+	page "pest. Many enjoy"
+	next "its simplicity."
+	next "@"

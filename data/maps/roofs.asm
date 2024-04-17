@@ -19,6 +19,7 @@ MapGroupRoofs:
 	db ROOF_NEW_BARK  ;  5 (Tarragon)
 	db -1             ;  6 (Chamomile)
 	db ROOF_GOLDENROD ;  7 (Dungeons)
+	db ROOF_OLIVINE   ; 8 (Tauric) 
 	assert_table_length NUM_MAP_GROUPS + 1
 
 Roofs:

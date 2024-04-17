@@ -112,7 +112,7 @@ DEF KRIS EQU __trainer_class__
 	const JOEY1
 	const MIKEY
 	const ALBERT
-	const GORDON
+	const TIMM
 	const SAMUEL
 	const IAN
 	const JOEY2
@@ -175,10 +175,10 @@ DEF KRIS EQU __trainer_class__
 	const CARRIE
 	const BRIDGET
 	const ALICE
-	const KRISE
-	const CONNIE1
-	const LINDA
-	const LAURA
+	const YUKI
+	const TAMMY
+	const NOOR
+	const BELL
 	const SHANNON
 	const MICHELLE
 	const DANA1

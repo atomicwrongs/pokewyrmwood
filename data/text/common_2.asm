@@ -1501,12 +1501,13 @@ _OakText1::
 	prompt
 
 _OakText2::
-	text "#MON and"
-	line "humans are under"
-	cont "threat by a"
-	cont "comet hurtling to"
-	cont "-wards our planet"
-	cont "from space."
+	text "Right now..."
+	line "..."
+	
+	para "A comet is"
+	line "hurtling towards"
+	cont "our planet from"
+	cont "space."
 	text_end
 
 _OakText3::
@@ -1522,14 +1523,12 @@ _OakText4::
 	cont "bouring regions"
 	cont "will be destroyed."
 
-	para "Everywhere else"
-	line "will be drowned"
-	cont "by tidal waves,"
-	cont "split apart by"
-	cont "earthquakes, or"
-	cont "suffocated under"
-	cont "a nightmare cloud"
-	cont "of choking ash."
+	para "The rest of the"
+	line "world will be"
+	cont "wracked by natu-"
+	cont "ral disasters"
+	cont "and smothered under"
+	cont "a cloud of ash."
 	prompt
 
 _OakText5::

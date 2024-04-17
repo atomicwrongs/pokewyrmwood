@@ -44,30 +44,28 @@ LegendTypes:
 	jumptext LegendTypeText
 
 LegendTypeText:
-	text "LEGENDARY #-"
-	line "MON have unique"
-	cont "TYPES not seen"
-	cont "in ordinary"
+	text "If a #-"
+	line "MON has a base"
+	cont "stat total of"
+	cont "exactly 600,"
+	cont "evolves twice"
+	cont "from its base"
+	cont "form, and gains"
+	cont "levels at a"
+	cont "SLOW rate, it"
+	cont "is known as a"
+	cont "PSEUDO LEGENDARY"
 	cont "#MON."
 	
-	para "For example, the"
-	line "LEGENDARY BEASTS"
-	cont "share the STORM"
-	cont "TYPE."
+	para "Four PSEUDO"
+	line "LEGENDARY"
+	cont "#MON can be"
+	cont "found in NOMAIA."
 	
-	para "This renders them"
-	line "resistant to"
-	cont "ELECTRIC TYPE"
-	cont "attacks, and"
-	cont "entirely immune"
-	cont "to FLYING TYPE"
-	cont "attacks."
-	
-	para "Little is known"
-	line "about other"
-	cont "LEGENDARY TYPES,"
-	cont "as these #MON"
-	cont "are so elusive."
+	para "GARCHOMP,"
+	line "TYRANITAR,"
+	cont "POLYBINK,"
+	cont "and BLIZZORB."
 	done
 
 RaikouBook:
@@ -245,22 +243,18 @@ DiancieBook:
 	jumptext DiancieText
 
 DiancieText:
-	text "DIANCIE, the"
-	line "Crystal Princess,"
-	cont "is equal parts"
-	cont "beautiful and"
-	cont "reclusive."
+	text "The #MON"
+	line "EEVEE is known"
+	cont "to evolve into"
+	cont "many different"
+	cont "forms."
 	
-	para "It is said that"
-	line "only truly lucky"
-	cont "humans can lay"
-	cont "their eyes on"
-	cont "her form."
-	
-	para "Made of shining"
-	line "crystals, she"
-	cont "hides in tucked-"
-	cont "away caves."
+	para "With seventeen"
+	line "distinct evo-"
+	cont "lutions, it is"
+	cont "one of the most"
+	cont "curious #MON"
+	cont "known to man."
 	done
 
 ChanceDuoMyth:

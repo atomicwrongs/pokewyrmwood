@@ -91,6 +91,7 @@ FlowerCrownText:
 RoadblockManScript:
 	checkevent EVENT_BEAT_FALKNER
 	iftrue .BeatMina
+	faceplayer
 	opentext
 	writetext CantGoThisWay
 	promptbutton
@@ -100,9 +101,21 @@ RoadblockManScript:
 	
 .BeatMina
 	checkevent EVENT_BEAT_BUGSY
-	iftrue .ClearRoadblock
+	iftrue .CheckifBeatMina
+	faceplayer
 	opentext
 	writetext CantGoThisWay2
+	promptbutton
+	closetext
+	applymovement PLAYER, StepBackMovement
+	end
+
+.CheckifBeatMina
+	checkevent EVENT_BEAT_FALKNER
+	iftrue .ClearRoadblock
+	faceplayer
+	opentext
+	writetext CantGoThisWay4
 	promptbutton
 	closetext
 	applymovement PLAYER, StepBackMovement
@@ -115,6 +128,20 @@ RoadblockManScript:
 	promptbutton
 	closetext
 	end
+
+CantGoThisWay4:
+	text "Whaaat, you beat"
+	line "KITS? Great job!"
+	
+	para "Those cloaked guys"
+	line "still haven't budged,"
+	cont "though."
+	
+	para "How about you head"
+	line "to the EAST part of"
+	cont "CHAMOMILE CITY and"
+	cont "challenge MINA?"
+	done
 
 RoadblockManScript2:
 	jumptextfaceplayer CantGoThisWay3
@@ -157,9 +184,11 @@ CantGoThisWay:
 	done
 
 CantGoThisWay2:
-	text "Oh, you beat MINA?"
-	line "Good job, but the"
-	cont "road's still closed."
+	text "You beat MINA?"
+	line "Good job!"
+
+	para "Road's still"
+	line "closed, though."
 	
 	para "If you head south"
 	line "from city center,"

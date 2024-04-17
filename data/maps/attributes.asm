@@ -154,3 +154,6 @@ ENDM
 	map_attributes ChamomileLibrary, CHAMOMILE_LIBRARY, $00, 0
 	map_attributes ChamomileTradeHouse, CHAMOMILE_TRADEHOUSE, $00, 0
 	map_attributes ChamomileGroundskeeper, CHAMOMILE_GROUNDSKEEPER, $00, 0
+	map_attributes ChamomileGym, CHAMOMILE_GYM, $00, 0
+
+	map_attributes Route103, ROUTE_103, $05, 0

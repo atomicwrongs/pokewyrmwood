@@ -29,3 +29,7 @@
 ; group 7 (Chamomile)
 	RGB 25,25,00, 20,17,08 ; morn/day
 	RGB 12,12,00, 10,09,05 ; nite
+
+; group 8 (Tauric)
+	RGB 15,10,31, 07,05,15 ; morn/day
+	RGB 06,05,17, 02,02,08 ; nite

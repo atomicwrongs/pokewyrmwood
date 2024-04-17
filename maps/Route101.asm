@@ -4,8 +4,16 @@
 
 Route101_MapScripts:
 	def_scene_scripts
+	scene_script Route101GirlPrankScene, SCENE_ROUTE101_PRANKGIRL
+	scene_script Route101Noop1, SCENE_ROUTE101_NOOP1
 
 	def_callbacks
+
+Route101GirlPrankScene:
+	end
+
+Route101Noop1:
+	end
 
 Route101ChallengeBoy:
 	jumptextfaceplayer ChallengeBoyText
@@ -35,17 +43,12 @@ ChallengeBoyText:
 	done
 
 GirlPrankScript1:
-	checkevent EVENT_ROUTE101_PRANKGIRL
-	iffalse .SkipGirl
 	showemote EMOTE_SHOCK, PRANKSTER_GIRL, 15
 	opentext
 	writetext PranksterGirlText
 	promptbutton
 	closetext
-	clearevent EVENT_ROUTE101_PRANKGIRL
-	end
-	
-.SkipGirl
+	setscene SCENE_ROUTE101_NOOP1
 	end
 	
 PranksterGirlText:
@@ -92,7 +95,7 @@ Route101_MapEvents:
 	def_warp_events
 
 	def_coord_events
-	coord_event 7, 17, -1, GirlPrankScript1
+	coord_event 7, 17, SCENE_ROUTE101_PRANKGIRL, GirlPrankScript1
 
 	def_bg_events
 

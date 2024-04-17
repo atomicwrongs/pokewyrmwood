@@ -580,11 +580,7 @@ wLastEnemyMove:: db
 wPlayerFutureSightCount:: db
 wEnemyFutureSightCount:: db
 
-wGivingExperienceToExpShareHolders:: db
-
-wBackupEnemyMonBaseStats:: ds NUM_EXP_STATS
-wBackupEnemyMonCatchRate:: db
-wBackupEnemyMonBaseExp:: db
+ds 8
 
 wPlayerFutureSightDamage:: dw
 wEnemyFutureSightDamage:: dw
@@ -2794,7 +2790,8 @@ wDudeNumBalls:: db
 wDudeBalls:: ds 2 * 4 + 1
 ENDU
 
-	ds 4
+wOtherTrainerType:: db
+	ds 3
 
 wd430:: ; mobile
 wBattleAction:: db
@@ -3031,7 +3028,7 @@ wRegisteredItem:: db
 wPlayerState:: db
 
 wHallOfFameCount:: db
-	ds 1
+wExpShareToggle:: db
 wTradeFlags:: flag_array NUM_NPC_TRADES
 	ds 1
 wMooMooBerries:: db
@@ -3062,8 +3059,10 @@ wLancesRoomSceneID::                db
 wHallOfFameSceneID::                db
 wChamomileParkSceneID::             db
 wChamomileGymOutsideSceneID::       db
+wChamomileGymSceneID::				db
+wRoute103SceneID::					db
 
-	ds 111
+	ds 109
 
 ; fight counts
 wJackFightCount::    db

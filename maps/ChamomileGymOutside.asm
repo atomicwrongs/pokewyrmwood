@@ -227,7 +227,7 @@ LeeFightScriptMain:
 	iftrue .Reptrip
 	checkevent EVENT_TOOK_LULLABALL
 	iftrue .Lullabear
-	winlosstext RivalLittlesageWinText, RivalLittlesageLossText
+	winlosstext RivalChamoWinText, RivalChamoLossText
 	loadtrainer LEE, LEE_2_REPTRIP
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
@@ -247,7 +247,7 @@ LeeFightScriptMain:
 	sjump .AfterYourDefeat
 
 .Reptrip:
-	winlosstext RivalLittlesageWinText, RivalLittlesageLossText
+	winlosstext RivalChamoWinText, RivalChamoWinText
 	loadtrainer LEE, LEE_2_LULLABEAR
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
@@ -438,6 +438,7 @@ ChamomileGymOutside_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event 14, 9, CHAMOMILE_GYM, 1
 
 	def_coord_events
 	coord_event 2, 16, SCENE_CHAMOMILE_GYM_OUTSIDE_LEEFIGHT, LeeFightTopScript
