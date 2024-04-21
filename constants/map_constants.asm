@@ -81,7 +81,7 @@ ENDM
 	map_const WOODSMAN_HOUSE,                                 4, 5  ; 2
 	map_const BILBERRY_ARIADOS_DEN,                          20, 18 ; 3
 	map_const MT_GINGER_INTERIOR,                            10, 15 ; 4
-	map_const MT_GINGER_OUTSIDE,                              7, 16 ; 5
+	map_const MT_GINGER_OUTSIDE,                             10, 16 ; 5
 	endgroup
 	
 	newgroup CHAMOMILE                                              ; 7

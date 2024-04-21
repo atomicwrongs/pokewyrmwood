@@ -139,7 +139,7 @@ ENDM
 	map_attributes WoodsmanHouse, WOODSMAN_HOUSE, $00, 0
 	map_attributes BilberryAriadosDen, BILBERRY_ARIADOS_DEN, $05, 0
 	map_attributes MtGingerInterior, MT_GINGER_INTERIOR, $00, 0
-	map_attributes MtGingerOutside, MT_GINGER_OUTSIDE, $19, 0
+	map_attributes MtGingerOutside, MT_GINGER_OUTSIDE, $40, 0
 	
 	map_attributes ChamomileCity, CHAMOMILE_CITY,  $05, WEST | EAST
 	connection west, ChamomilePark, CHAMOMILE_PARK, 0

@@ -84,13 +84,12 @@ INCBIN "data/tilesets/mansion_metatiles.bin"
 TilesetMansionColl::
 INCLUDE "data/tilesets/mansion_collision.asm"
 
-TilesetCaveGFX::
-INCBIN "gfx/tilesets/cave.2bpp.lz"
-
+TilesetSnowmountainMeta::
 TilesetCaveMeta::
 TilesetDarkCaveMeta::
 INCBIN "data/tilesets/cave_metatiles.bin"
 
+TilesetSnowmountainColl::
 TilesetCaveColl::
 TilesetDarkCaveColl::
 INCLUDE "data/tilesets/cave_collision.asm"
@@ -337,10 +336,5 @@ TilesetAerodactylWordRoomMeta::
 INCBIN "data/tilesets/aerodactyl_word_room_metatiles.bin"
 
 TilesetSnowmountainGFX::
-INCBIN "gfx/tilesets/snowmountain.2bpp.lz"
-
-TilesetSnowmountainMeta::
-INCBIN "data/tilesets/snowmountain_metatiles.bin"
-
-TilesetSnowmountainColl::
-INCBIN "data/tilesets/snowmountain_collision.asm"
+TilesetCaveGFX::
+INCBIN "gfx/tilesets/cave.2bpp.lz"

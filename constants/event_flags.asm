@@ -134,8 +134,8 @@
 ; Johto hidden items
 	const EVENT_BILBERRY_BERRY
 	const EVENT_BILBERRY_SEED
-	const EVENT_TIN_TOWER_5F_HIDDEN_CARBOS
-	const EVENT_BURNED_TOWER_1F_HIDDEN_ETHER
+	const EVENT_GINGER_MONEY
+	const EVENT_GINGER_STONE
 	const_skip ; unused in Crystal
 	const_skip ; unused in Crystal
 	const_skip ; unused in Crystal
