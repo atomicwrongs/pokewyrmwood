@@ -253,9 +253,9 @@ MoveDescriptions::
 	dw BeatUpDescription
 	dw FairyWindDescription
 	dw Sketch2Description
+	dw SpikyShieldDescription
+	dw HexDescription
 	assert_table_length NUM_ATTACKS
-	dw MoveFDDescription
-	dw MoveFEDescription
 	dw MoveFFDescription
 	dw Move00Description
 	assert_table_length $100
@@ -1274,3 +1274,11 @@ FairyWindDescription:
 Sketch2Description:
 	db "Learns the tar-"
 	next "get's move.@"
+
+SpikyShieldDescription:
+	db "Protects with a"
+	next "spiky barrier.@"
+
+HexDescription:
+	db "Badly hurts an"
+	next "afflicted foe.@"

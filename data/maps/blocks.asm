@@ -101,6 +101,12 @@ ChamomileGymOutside_Blocks:
 BilberryAriadosDen_Blocks:
 	INCBIN "maps/BilberryAriadosDen.blk"
 
+MtGingerInterior_Blocks:
+	INCBIN "maps/MtGingerInterior.blk"
+
+MtGingerOutside_Blocks:
+	INCBIN "maps/MtGingerOutside.blk"
+
 ChamomileApartments2_Blocks:
 	INCBIN "maps/ChamomileApartments2.blk"
 
@@ -130,4 +136,16 @@ ChamomileGym_Blocks:
 
 Route103_Blocks:
 	INCBIN "maps/Route103.blk"
+
+TauricTown_Blocks:
+	INCBIN "maps/TauricTown.blk"
+
+TauricPokecenter_Blocks:
+	INCBIN "maps/TauricPokecenter.blk"
+
+TauricMart_Blocks:
+	INCBIN "maps/TauricMart.blk"
+
+TauricHouse_Blocks:
+	INCBIN "maps/TauricHouse.blk"
 

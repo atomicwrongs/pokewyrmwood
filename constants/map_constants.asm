@@ -80,6 +80,8 @@ ENDM
 	map_const BILBERRY_WOODS,                                20, 15 ; 1
 	map_const WOODSMAN_HOUSE,                                 4, 5  ; 2
 	map_const BILBERRY_ARIADOS_DEN,                          20, 18 ; 3
+	map_const MT_GINGER_INTERIOR,                            10, 15 ; 4
+	map_const MT_GINGER_OUTSIDE,                              7, 16 ; 5
 	endgroup
 	
 	newgroup CHAMOMILE                                              ; 7
@@ -99,6 +101,10 @@ ENDM
 	
 	newgroup TAURIC													; 8
 	map_const ROUTE_103,                                     15, 15 ; 1
+	map_const TAURIC_TOWN,                                   12, 12 ; 2
+	map_const TAURIC_POKECENTER,                              4, 3 ; 3
+	map_const TAURIC_MART,                                    3, 4 ; 4
+	map_const TAURIC_HOUSE,                                   4, 3 ; 5
 	endgroup
 
 DEF NUM_MAP_GROUPS EQU const_value ; 8

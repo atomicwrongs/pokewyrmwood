@@ -3651,6 +3651,7 @@ ChesnaughtEvosAttacks:
 	db 32, LEAF_BLADE
 	db 33, PROTECT
 	db 35, BONE_CLUB
+	db 37, SPIKYSHIELD
 	db 39, ARMOUR_BREAK
 	db 42, SLAM
 	db 44, POWERPUNCH

@@ -231,6 +231,8 @@ Route103_MapEvents:
 	def_warp_events
 	warp_event  4, 2, CHAMOMILE_CITY, 12
 	warp_event 4, 3, CHAMOMILE_CITY, 12
+	warp_event 25, 18, TAURIC_TOWN, 1
+	warp_event 25, 19, TAURIC_TOWN, 2
 
 	def_coord_events
 	coord_event 6, 4, SCENE_103_EXPSHARE, ExpShareSceneStart

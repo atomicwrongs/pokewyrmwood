@@ -50,7 +50,10 @@ INCLUDE "maps/ChamomileGroundskeeper.asm"
 
 SECTION "Map Scripts 6", ROMX
 INCLUDE "maps/Route103.asm"
-
+INCLUDE "maps/TauricTown.asm"
+INCLUDE "maps/TauricPokecenter.asm"
+INCLUDE "maps/TauricMart.asm"
+INCLUDE "maps/TauricHouse.asm"
 
 SECTION "Map Scripts 7", ROMX
 
@@ -108,7 +111,8 @@ SECTION "Map Scripts 24", ROMX
 INCLUDE "maps/Route102.asm"
 INCLUDE "maps/BilberryWoods.asm"
 INCLUDE "maps/WoodsmanHouse.asm"
-
+INCLUDE "maps/MtGingerInterior.asm"
+INCLUDE "maps/MtGingerOutside.asm"
 
 SECTION "Map Scripts 25", ROMX
 

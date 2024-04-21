@@ -252,4 +252,6 @@ MoveNames::
 	li "BEAT UP"
 	li "FAIRY WIND"
 	li "SKETCH"
+	li "SPIKY SHIELD"
+	li "HEX"
 	assert_list_length NUM_ATTACKS

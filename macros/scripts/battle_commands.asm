@@ -178,6 +178,8 @@ ENDM
 	command curl                    ; af
 	command sketch
 	command starthail
+	command spikyshield
+	command hex
 DEF NUM_EFFECT_COMMANDS EQU const_value - 1
 
 	const_def -1, -1

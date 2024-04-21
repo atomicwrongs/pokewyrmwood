@@ -238,14 +238,10 @@ MartViridian:
 	db -1 ; end
 
 MartPewter:
-	db 7 ; # items
-	db GREAT_BALL
-	db SUPER_POTION
-	db SUPER_REPEL
+	db 3 ; # items
+	db POKE_BALL
 	db ANTIDOTE
 	db PARLYZ_HEAL
-	db AWAKENING
-	db BURN_HEAL
 	db -1 ; end
 
 MartCerulean:

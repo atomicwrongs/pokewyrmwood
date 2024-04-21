@@ -102,7 +102,7 @@ Moves:
 	move THUNDER,      EFFECT_THUNDER,           120, ELECTRIC,      SPECIAL,   70, 10,  30
 	move ROCK_THROW,   EFFECT_NORMAL_HIT,         50, ROCK,          PHYSICAL,  90, 15,   0
 	move EARTHQUAKE,   EFFECT_EARTHQUAKE,        100, GROUND,        PHYSICAL, 100, 10,   0
-	move CALM_MIND,    EFFECT_SP_ATK_UP_2,         0, PSYCHIC_TYPE,  STATUS,   100, 20,   0
+	move CALM_MIND,    EFFECT_CALMMIND,         0, PSYCHIC_TYPE,  STATUS,   100, 20,   0
 	move DIG,          EFFECT_FLY,                60, GROUND,        PHYSICAL, 100, 10,   0
 	move TOXIC,        EFFECT_TOXIC,               0, POISON,        STATUS,    85, 10,   0
 	move CONFUSION,    EFFECT_CONFUSE_HIT,        50, PSYCHIC_TYPE,  SPECIAL,  100, 25,  10
@@ -266,4 +266,6 @@ Moves:
 	move BEAT_UP,      EFFECT_BEAT_UP,            10, DARK,          PHYSICAL, 100, 10,   0
 	move FAIRY_WIND,   EFFECT_NORMAL_HIT,         40, FAIRY,         SPECIAL,  100, 40,   0
 	move SKETCH,       EFFECT_SKETCH,              0, NORMAL,         STATUS,  100, 1,    0
+	move SPIKYSHIELD,  EFFECT_SPIKYSHIELD,         10, GRASS,         STATUS,  100, 15, 100
+	move HEX,          EFFECT_HEX,                60, GHOST,         SPECIAL, 100, 15, 100
 	assert_table_length NUM_ATTACKS

@@ -335,3 +335,12 @@ INCBIN "data/tilesets/omanyte_word_room_metatiles.bin"
 
 TilesetAerodactylWordRoomMeta::
 INCBIN "data/tilesets/aerodactyl_word_room_metatiles.bin"
+
+TilesetSnowmountainGFX::
+INCBIN "gfx/tilesets/snowmountain.2bpp.lz"
+
+TilesetSnowmountainMeta::
+INCBIN "data/tilesets/snowmountain_metatiles.bin"
+
+TilesetSnowmountainColl::
+INCBIN "data/tilesets/snowmountain_collision.asm"

@@ -258,6 +258,8 @@
 	const BEAT_UP      ; fb
 	const FAIRY_WIND   ; 01
 	const SKETCH
+	const SPIKYSHIELD
+	const HEX
 DEF NUM_ATTACKS EQU const_value - 1
 
 ; Battle animations use the same constants as the moves up to this point

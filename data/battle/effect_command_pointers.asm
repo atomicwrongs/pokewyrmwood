@@ -178,4 +178,6 @@ BattleCommandPointers:
 	dw BattleCommand_Curl
 	dw BattleCommand_Sketch
 	dw BattleCommand_StartHail
+	dw BattleCommand_SpikyShield
+	dw BattleCommand_Hex
 	assert_table_length NUM_EFFECT_COMMANDS

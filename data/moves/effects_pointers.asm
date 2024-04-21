@@ -157,4 +157,7 @@ MoveEffectsPointers:
 	dw Sketch
 	dw FreezeHit ; for Blizzard
 	dw Hail
+	dw CalmMind
+	dw SpikyShield
+	dw Hex
 	assert_table_length NUM_MOVE_EFFECTS

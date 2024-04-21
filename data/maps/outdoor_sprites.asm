@@ -69,7 +69,7 @@ TarragonGroupSprites:
 ; 12 nonwalking filler sprites
 	db SPRITE_SUICUNE
 	db SPRITE_SILVER_TROPHY
-	db SPRITE_FAMICOM
+	db SPRITE_FRUIT_TREE
 	db SPRITE_POKEDEX
 	db SPRITE_WILL
 	db SPRITE_NURSE

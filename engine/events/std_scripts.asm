@@ -148,13 +148,20 @@ PictureBookshelfScript:
 	farjumptext PictureBookshelfText
 
 MagazineBookshelfScript:
-	random 6
+	random 13
 	ifequal 0, .Bookshelf1
 	ifequal 1, .Bookshelf2
 	ifequal 2, .Bookshelf3
 	ifequal 3, .Bookshelf4
 	ifequal 4, .Bookshelf5
 	ifequal 5, .Bookshelf6
+	ifequal 6, .Bookshelf7
+	ifequal 7, .Bookshelf8
+	ifequal 8, .Bookshelf9
+	ifequal 9, .Bookshelf10
+	ifequal 10, .Bookshelf11
+	ifequal 11, .Bookshelf12
+	ifequal 12, .Bookshelf13
 	
 .Bookshelf1:
 	farjumptext MagazineBookshelfText1
@@ -173,6 +180,27 @@ MagazineBookshelfScript:
 
 .Bookshelf6:
 	farjumptext MagazineBookshelfText6
+
+.Bookshelf7:
+	farjumptext MagazineBookshelfText7
+
+.Bookshelf8:
+	farjumptext MagazineBookshelfText8
+
+.Bookshelf9:
+	farjumptext MagazineBookshelfText9
+
+.Bookshelf10:
+	farjumptext MagazineBookshelfText10
+
+.Bookshelf11:
+	farjumptext MagazineBookshelfText11
+
+.Bookshelf12:
+	farjumptext MagazineBookshelfText12
+
+.Bookshelf13:
+	farjumptext MagazineBookshelfText13
 
 TeamRocketOathScript:
 	farjumptext TeamRocketOathText
@@ -195,7 +223,7 @@ WindowScript:
 	farjumptext WindowText
 
 TVScript:
-	random 10
+	random 13
 	ifequal 0, .TVScript1
 	ifequal 1, .TVScript2
 	ifequal 2, .TVScript3
@@ -206,6 +234,9 @@ TVScript:
 	ifequal 7, .TVScript8
 	ifequal 8, .TVScript9
 	ifequal 9, .TVScript10
+	ifequal 10, .TVScript11
+	ifequal 11, .TVScript12
+	ifequal 12, .TVScript13
 
 .TVScript1
 	opentext
@@ -273,6 +304,27 @@ TVScript:
 .TVScript10
 	opentext
 	farwritetext TVText10
+	waitbutton
+	closetext
+	end
+
+.TVScript11
+	opentext
+	farwritetext TVText11
+	waitbutton
+	closetext
+	end
+
+.TVScript12
+	opentext
+	farwritetext TVText12
+	waitbutton
+	closetext
+	end
+
+.TVScript13
+	opentext
+	farwritetext TVText13
 	waitbutton
 	closetext
 	end

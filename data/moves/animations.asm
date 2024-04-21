@@ -254,9 +254,9 @@ BattleAnimations::
 	dw BattleAnim_BeatUp
 	dw BattleAnim_FairyWind
 	dw BattleAnim_Sketch
+	dw BattleAnim_SpikyShield
+	dw BattleAnim_Hex
 	assert_table_length NUM_ATTACKS + 1
-	dw BattleAnim_253
-	dw BattleAnim_254
 	dw BattleAnim_SweetScent2
 	assert_table_length $100
 ; $100
@@ -286,8 +286,6 @@ BattleAnimations::
 	assert_table_length NUM_BATTLE_ANIMS + 1
 
 BattleAnim_0:
-BattleAnim_253:
-BattleAnim_254:
 BattleAnim_MirrorMove:
 	anim_ret
 
@@ -3425,6 +3423,18 @@ BattleAnim_PowderSnow:
 	anim_wait 32
 	anim_ret
 
+BattleAnim_SpikyShield:
+	anim_1gfx ANIM_GFX_OBJECTS
+	anim_bgeffect ANIM_BG_CYCLE_MID_OBPALS_GRAY_AND_YELLOW, $0, $2, $0
+	anim_obj ANIM_OBJ_RAZOR_LEAF, 80, 80, $0
+	anim_obj ANIM_OBJ_RAZOR_LEAF, 80, 80, $d
+	anim_obj ANIM_OBJ_RAZOR_LEAF, 80, 80, $1a
+	anim_obj ANIM_OBJ_RAZOR_LEAF, 80, 80, $27
+	anim_obj ANIM_OBJ_RAZOR_LEAF, 80, 80, $34
+	anim_sound 0, 0, SFX_PROTECT
+	anim_wait 96
+	anim_ret
+
 BattleAnim_Protect:
 	anim_1gfx ANIM_GFX_OBJECTS
 	anim_bgeffect ANIM_BG_CYCLE_MID_OBPALS_GRAY_AND_YELLOW, $0, $2, $0
@@ -4332,6 +4342,7 @@ BattleAnim_HiddenPower:
 	anim_wait 32
 	anim_ret
 
+BattleAnim_Hex:
 BattleAnim_ShadowClaw:
 	anim_1gfx ANIM_GFX_CUT
 	anim_sound 0, 0, SFX_CURSE

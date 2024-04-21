@@ -146,7 +146,7 @@ MagazineBookshelfText4:
 	line "Travels..."
 	
 	para "Lord of the"
-	line "Flyon..."
+	line "Flygon..."
 	done
 
 MagazineBookshelfText5:
@@ -165,6 +165,62 @@ MagazineBookshelfText6:
 	
 	para "Pride and"
 	line "Arctovish..."
+	done
+
+MagazineBookshelfText7:
+	text "Mr Mime and"
+	line "Punishment..."
+	
+	para "Darkrai"
+	line "Matter..."
+	done
+
+MagazineBookshelfText8:
+	text "Wailord of"
+	line "the Rings..."
+	
+	para "The Brothers"
+	line "Karrablastov..."
+	done
+
+MagazineBookshelfText9:
+	text "The Old Man"
+	line "and the Seadra..."
+	
+	para "Game of Throhs..."
+	done
+	
+MagazineBookshelfText10:
+	text "House of"
+	line "Leavanny..."
+	
+	para "A Clockwork"
+	line "Oranguru..."
+	done
+
+MagazineBookshelfText11:
+	text "Hellstar"
+	line "Remoraid..."
+	
+	para "Hot Allostatic"
+	line "Lotad..."
+	done
+
+MagazineBookshelfText12:
+	text "The works of"
+	line "H. P. Luvdisc..."
+	
+	para "Tell Me I'm"
+	line "Wurmples..."
+	done
+
+MagazineBookshelfText13:
+	text "Waiting for"
+	line "Seedot..."
+	
+	para "The Houndoom"
+	line "of the Basker-"
+	cont "villes..."
 	done
 
 TeamRocketOathText:
@@ -312,6 +368,36 @@ TVText10:
 	line "smell the tasty"
 	cont "bread through"
 	cont "the screen."
+	done
+
+TVText11:
+	text "A show about"
+	line "girls battling"
+	cont "for the lead role"
+	cont "in a play."
+	
+	para "There's a talking"
+	line "farigiraf..."
+	done
+
+TVText12:
+	text "It's an antho-"
+	line "logy of strange"
+	cont "and eerie tales."
+	
+	para "A man in a suit"
+	line "welcomes you to"
+	cont "The Unown Zone."
+	done
+
+TVText13:
+	text "A musical is on!"
+	line "It's called Little"
+	cont "Mart of Horrors."
+	
+	para "A carnivine croons"
+	line "its way into world"
+	cont "domination..."
 	done
 
 HomepageText:

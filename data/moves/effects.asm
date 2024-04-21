@@ -2062,3 +2062,39 @@ Hail:
 	doturn
 	starthail
 	endmove
+
+SpikyShield:
+	checkobedience
+	usedmovetext
+	doturn
+	protect
+	endmove
+
+Hex:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	hex
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
+	endmove
+
+CalmMind:
+	checkobedience
+	usedmovetext
+	doturn
+	specialdefenseup
+	specialattackup
+	endmove
