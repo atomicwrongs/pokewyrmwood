@@ -830,37 +830,23 @@ BattleAnim_Apoplexy:
 	anim_ret
 
 BattleAnim_Nocturne:
-	anim_1gfx ANIM_GFX_SMOKE
-.loop1
-	anim_sound 6, 2, SFX_SPITE
-	anim_obj ANIM_OBJ_NIGHTMARE,   8, 0,  11, 4, $7
-	anim_wait 6
-	anim_loop 10, .loop1
-.loop2
-	anim_sound 0, 1, SFX_NIGHTMARE
-	anim_wait 8
-	anim_loop 10, .loop2
-	anim_incobj 1
-	anim_incobj 2
-	anim_incobj 3
-	anim_incobj 4
-	anim_incobj 5
-	anim_incobj 6
-	anim_incobj 7
-	anim_incobj 8
-	anim_incobj 9
-	anim_incobj 10
-	anim_wait 2
-.loop3
-	anim_sound 0, 1, SFX_NIGHTMARE
-	anim_obj ANIM_OBJ_SOUND, -15, 0,   7, 0, $1
-	anim_obj ANIM_OBJ_SMOKE, -15, 0,   7, 0, $2
-	anim_obj ANIM_OBJ_SPITE, -15, 0,   7, 0, $3
-	anim_obj ANIM_OBJ_SMOKE, -15, 0,   7, 0, $4
-	anim_obj ANIM_OBJ_SOUND, -15, 0,   7, 0, $5
-	anim_wait 16
-	anim_loop 2, .loop3
+	anim_2gfx ANIM_GFX_SMOKE, ANIM_GFX_SMOKE
+	anim_bgp $1b
+	anim_bgeffect ANIM_BG_SHAKE_SCREEN_X, $50, $4, $10
+	anim_bgeffect ANIM_BG_CYCLE_OBPALS_GRAY_AND_YELLOW, $0, $2, $0
+	anim_sound 0, 0, SFX_NIGHTMARE
+	anim_obj ANIM_OBJ_AEROBLAST, 72, 88, $0
 	anim_wait 32
+	anim_sound 0, 0, SFX_HYPER_BEAM
+	anim_obj ANIM_OBJ_BEAM, 80, 84, $0
+	anim_wait 2
+	anim_sound 0, 1, SFX_HYPER_BEAM
+	anim_obj ANIM_OBJ_BEAM, 96, 76, $0
+	anim_wait 2
+	anim_sound 0, 1, SFX_HYPER_BEAM
+	anim_obj ANIM_OBJ_BEAM, 112, 68, $0
+	anim_obj ANIM_OBJ_BEAM_TIP, 126, 62, $0
+	anim_wait 48
 	anim_ret
 
 BattleAnim_SuperFang:
@@ -2251,21 +2237,6 @@ BattleAnim_DarkPulse:
 	anim_2gfx ANIM_GFX_HORN, ANIM_GFX_HIT
 	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $8, $40
 	anim_obj ANIM_OBJ_HORN, 72, 80, $3
-	anim_wait 8
-.loop
-	anim_sound 0, 1, SFX_HORN_ATTACK
-	anim_obj ANIM_OBJ_HIT_BIG_YFIX, 132, 40, $0
-	anim_wait 8
-	anim_sound 0, 1, SFX_HORN_ATTACK
-	anim_obj ANIM_OBJ_HIT_BIG_YFIX, 140, 48, $0
-	anim_wait 8
-	anim_sound 0, 1, SFX_HORN_ATTACK
-	anim_obj ANIM_OBJ_HIT_BIG_YFIX, 132, 56, $0
-	anim_wait 8
-	anim_sound 0, 1, SFX_HORN_ATTACK
-	anim_obj ANIM_OBJ_HIT_BIG_YFIX, 124, 48, $0
-	anim_wait 8
-	anim_loop 3, .loop
 	anim_ret
 
 BattleAnim_PoisonSting:

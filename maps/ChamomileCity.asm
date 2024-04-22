@@ -6,6 +6,11 @@ ChamomileCity_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_NEWMAP, ChamomileFlypointCallback
+
+ChamomileFlypointCallback:
+	setflag ENGINE_FLYPOINT_CHAMOMILE
+	endcallback
 	
 ChamomileBallScript:
 	itemball GREAT_BALL

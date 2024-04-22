@@ -4,6 +4,11 @@ TarragonTown_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_NEWMAP, TarragonTownFlypointCallback
+
+TarragonTownFlypointCallback:
+	setflag ENGINE_FLYPOINT_TARRAGON
+	endcallback
 	
 TarragonTownSign:
 	jumptext TarragonTownSignText

@@ -16,7 +16,7 @@ SpawnPoints:
 	spawn BATTLE_TOWER_OUTSIDE,          8, 10
 	spawn TARRAGON_TOWN,                 15, 10
 	spawn CHAMOMILE_CITY,                36, 14
-	spawn NONE,                          6,  2
+	spawn TAURIC_TOWN,                   11, 18
 
 	spawn N_A,                          -1, -1
 

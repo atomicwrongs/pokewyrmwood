@@ -4,6 +4,7 @@
 	const MT_GINGER_CHRIS_PLACEHOLDER
 	const MT_GINGER_KRIS_PLACEHOLDER
 	const MT_GINGER_KITS
+	const MT_GINGER_KITS_2
 
 MtGingerOutside_MapScripts:
 	def_scene_scripts
@@ -13,9 +14,20 @@ MtGingerOutside_MapScripts:
 	def_callbacks
 
 MtGingerOutsideKitsScene:
+	checkevent EVENT_TALKED_TO_KITS
+	iffalse DisappearKitsScript
+	checkevent EVENT_BEAT_BUGSY
+	iftrue DisappearKitsScript
+	end
+
+DisappearKitsScript:
+	disappear MT_GINGER_KITS_2
 	end
 
 MtGingerOutsideNoopScene:
+	end
+
+MtGingerKitsScript2:
 	end
 
 SkiierLucyScript:
@@ -163,10 +175,9 @@ MtGingerKitsEncounter:
 	sjump BattleKitsStart
 
 .AlreadyTalked_Script:
-	moveobject MT_GINGER_KITS, 10, 4
 	applymovement PLAYER, WalkToSummitMovement2
-	turnobject MT_GINGER_KITS, LEFT
-	sjump BattleKitsStart
+	turnobject MT_GINGER_KITS_2, LEFT
+	sjump BattleKits2Start
 
 BattleKitsStart:
 	writetext BattleKitsStartText
@@ -202,6 +213,46 @@ BattleKitsStart:
 	turnobject PLAYER, DOWN
 	applymovement MT_GINGER_KITS, KitsExitsMovement
 	disappear MT_GINGER_KITS
+	disappear MT_GINGER_CHRIS_PLACEHOLDER
+	disappear MT_GINGER_KRIS_PLACEHOLDER
+	setscene SCENE_MT_GINGER_NOOP
+	end
+
+BattleKits2Start:
+	opentext
+	writetext BattleKitsStartText
+	waitbutton
+	closetext
+	winlosstext BeatKitsText, 0
+	loadtrainer BUGSY, BUGSY1
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_BUGSY
+	playmapmusic
+	opentext
+	writetext KitsYouWonText
+	waitbutton
+	closetext
+	opentext
+	writetext ReceivedSummitBadgeText
+	playsound SFX_GET_BADGE
+	waitsfx
+	setflag ENGINE_HIVEBADGE
+	addcellnum PHONE_KITS
+	closetext
+	opentext
+	writetext GotInfiniteRopeText
+	playsound SFX_ITEM
+	giveitem ESCAPE_ROPE, 1
+	waitbutton
+	closetext
+	opentext
+	writetext KitsHospitalText
+	waitbutton
+	closetext
+	turnobject PLAYER, DOWN
+	applymovement MT_GINGER_KITS_2, KitsExitsMovement
+	disappear MT_GINGER_KITS_2
 	disappear MT_GINGER_CHRIS_PLACEHOLDER
 	disappear MT_GINGER_KRIS_PLACEHOLDER
 	setscene SCENE_MT_GINGER_NOOP
@@ -460,4 +511,5 @@ MtGingerOutside_MapEvents:
 	object_event  0, 31, SPRITE_CHRIS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MtGingerChrisScript, EVENT_MOUNTAIN_KITS
 	object_event  0, 31, SPRITE_KRIS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MtGingerKrisScript, EVENT_MOUNTAIN_KITS
 	object_event 10,  9, SPRITE_FALKNER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, MtGingerKitsScript, EVENT_MOUNTAIN_KITS
+	object_event 10, 4, SPRITE_FALKNER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, MtGingerKitsScript2, EVENT_MOUNTAIN_KITS_2
 	

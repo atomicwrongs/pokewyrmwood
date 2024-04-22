@@ -15,6 +15,11 @@ NewBarkTown_MapScripts:
 	scene_script LittlesageNoop3Scene,   SCENE_LITTLESAGE_NOOP
 
 	def_callbacks
+	callback MAPCALLBACK_NEWMAP, NewBarkFlypointCallback
+
+NewBarkFlypointCallback:
+	setflag ENGINE_FLYPOINT_NEW_BARK
+	endcallback
 	
 LittleSageHealManScript:
 	special HealParty

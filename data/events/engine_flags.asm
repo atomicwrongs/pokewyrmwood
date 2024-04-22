@@ -67,6 +67,9 @@ EngineFlags:
 	engine_flag wVisitedSpawns, SPAWN_INDIGO
 	engine_flag wVisitedSpawns, SPAWN_NEW_BARK
 	engine_flag wVisitedSpawns, SPAWN_BATTLE_TOWER
+	engine_flag wVisitedSpawns, SPAWN_TARRAGON
+	engine_flag wVisitedSpawns, SPAWN_CHAMOMILE
+	engine_flag wVisitedSpawns, SPAWN_TAURIC
 
 	engine_flag wLuckyNumberShowFlag, LUCKYNUMBERSHOW_GAME_OVER_F
 

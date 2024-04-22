@@ -4,6 +4,11 @@ TauricTown_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_NEWMAP, TauricTownFlypointCallback
+
+TauricTownFlypointCallback:
+	setflag ENGINE_FLYPOINT_TAURIC
+	endcallback
 
 TauricTownSign:
 	jumptext TauricTownSignText
