@@ -3061,8 +3061,9 @@ wChamomileParkSceneID::             db
 wChamomileGymOutsideSceneID::       db
 wChamomileGymSceneID::				db
 wRoute103SceneID::					db
+wMtGingerOutsideSceneID::           db
 
-	ds 109
+	ds 108
 
 ; fight counts
 wJackFightCount::    db

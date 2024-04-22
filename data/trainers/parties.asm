@@ -28,10 +28,11 @@ WhitneyGroup:
 
 BugsyGroup:
 	; BUGSY (1)
-	db "BUGSY@", TRAINERTYPE_MOVES
-	db 14, METAPOD,    TACKLE, STRING_SHOT, DEFENSE_CURL, NO_MOVE
-	db 14, LEDIAN,     POISON_STING, STRING_SHOT, DEFENSE_CURL, NO_MOVE
-	db 16, SCYTHER,    QUICK_ATTACK, LEER, FURY_CUTTER, NO_MOVE
+	db "KITS@", TRAINERTYPE_NICKNAME | TRAINERTYPE_ITEM
+	db 10, BERGMITE, "@", NO_ITEM
+	db 12, NACLI, "@", NO_ITEM
+	db 14, ARCHEN, "@", NO_ITEM
+	db 18, MINERAT, "IDRIS@", HARD_STONE
 	db -1 ; end
 
 MortyGroup:
@@ -302,9 +303,9 @@ LtSurgeGroup:
 
 ScientistGroup:
 	; SCIENTIST (1)
-	db "ROSS@", TRAINERTYPE_NORMAL
-	db 22, DRILBUR
-	db 22, DRILBUR
+	db "ORION@", TRAINERTYPE_NORMAL
+	db 10, LARVITAR
+	db 11, KRABBY
 	db -1 ; end
 
 	; SCIENTIST (2)
@@ -1462,13 +1463,15 @@ GentlemanGroup:
 
 SkierGroup:
 	; SKIER (1)
-	db "ROXANNE@", TRAINERTYPE_NORMAL
-	db 28, WOOBAT
+	db "LUCY@", TRAINERTYPE_NORMAL
+	db 7, WOOBAT
+	db 9, SHIVERKIT
 	db -1 ; end
 
 	; SKIER (2)
-	db "CLARISSA@", TRAINERTYPE_NORMAL
-	db 28, CATNIPPY
+	db "BRYNNE@", TRAINERTYPE_NORMAL
+	db 10, MEWLT
+	db 8, BERGMITE
 	db -1 ; end
 
 TeacherGroup:
@@ -2273,16 +2276,16 @@ GuitaristGroup:
 
 HikerGroup:
 	; HIKER (1)
-	db "ANTHONY@", TRAINERTYPE_NORMAL
-	db 16, CUBTERRA
-	db 18, PANSULK
+	db "MIKE@", TRAINERTYPE_NORMAL
+	db 11, CUBTERRA
+	db 11, DRILBUR
 	db -1 ; end
 
 	; HIKER (2)
-	db "RUSSELL@", TRAINERTYPE_NORMAL
-	db  4, CUBTERRA
-	db  6, CUBTERRA
-	db  8, CUBTERRA
+	db "BRANT@", TRAINERTYPE_NORMAL
+	db  7, NACLI
+	db  8, SANDSHREW
+	db  10, SQUEAKRAG
 	db -1 ; end
 
 	; HIKER (3)
@@ -2605,11 +2608,11 @@ JugglerGroup:
 
 BlackbeltGroup:
 	; BLACKBELT_T (1)
-	db "KENJI@", TRAINERTYPE_NORMAL
-	db 27, MOGGIBOX
-	db 30, PANSEER
-	db 27, MOGGIBOX
-	db 32, SIMISTRIKE
+	db "MAX@", TRAINERTYPE_NORMAL
+	db 10, PUGILHISS
+	db 9, PANSEER
+	db 8, PANSULK
+	db 8, PANSTRIKE
 	db -1 ; end
 
 	; BLACKBELT_T (2)

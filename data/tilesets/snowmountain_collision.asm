@@ -70,3 +70,7 @@
 	tilecoll WALL, HEADBUTT_TREE, WALL, FLOOR ; 45
 	tilecoll WALL, WALL, WALL, WALL ; 46
 	tilecoll WALL, WALL, WALL, WALL ; 47
+	tilecoll FLOOR, FLOOR, HOP_DOWN, HOP_DOWN ; 48
+	tilecoll , , ,  ; 49
+	tilecoll , , ,  ; 4a
+	tilecoll , , ,  ; 4b

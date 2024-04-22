@@ -92,8 +92,8 @@ TauricTown_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2, 20, ROUTE_103, 3
-	warp_event 2, 21, ROUTE_103, 3
+	warp_event 2, 20, ROUTE_103, 4
+	warp_event 2, 21, ROUTE_103, 4
 	warp_event 7, 9, TAURIC_MART, 1
 	warp_event 11, 17, TAURIC_POKECENTER, 1
 	warp_event 17, 15, TAURIC_HOUSE, 1

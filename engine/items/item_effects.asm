@@ -2073,8 +2073,6 @@ EscapeRopeEffect:
 	farcall EscapeRopeFunction
 
 	ld a, [wItemEffectSucceeded]
-	cp 1
-	call z, UseDisposableItem
 	ret
 
 SuperRepelEffect:
