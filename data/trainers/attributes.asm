@@ -416,4 +416,10 @@ TrainerClassAttributes:
 	dw AI_BASIC | AI_AGGRESSIVE | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
+; Skier Mugshot
+	db NO_ITEM, NO_ITEM
+	db 0 ; base reward
+	dw AI_BASIC | AI_AGGRESSIVE | AI_STATUS | AI_RISKY
+	dw CONTEXT_USE | SWITCH_SOMETIMES
+
 	assert_table_length NUM_TRAINER_CLASSES

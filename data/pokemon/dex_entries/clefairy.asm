@@ -6,5 +6,5 @@
 	next "sure to flourish."
 
 	page "It caringly tends"
-	next "to even the tiniest"
-	next "of sprouts.@"
+	next "to even tiny or"
+	next "weak sprouts.@"

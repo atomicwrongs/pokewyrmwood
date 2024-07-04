@@ -70,4 +70,5 @@ TrainerClassNames::
 	li "RIVAL"
 	li "MYSTICALMAN"
 	li "HORDE OF"
+	li "SKIER"
 	assert_list_length NUM_TRAINER_CLASSES

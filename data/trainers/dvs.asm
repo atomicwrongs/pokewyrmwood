@@ -72,4 +72,5 @@ TrainerClassDVs:
 	dn 13, 13, 13, 13 ; LEE
 	dn  9,  8,  8,  8 ; MYSTICALMAN
 	dn 13, 13, 13, 13 ; HORDE
+	dn 13, 13, 13, 13 ; SKIER MUGSHOT
 	assert_table_length NUM_TRAINER_CLASSES

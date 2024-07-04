@@ -40,4 +40,5 @@ FemaleTrainers:
 	db POKEFANF
 	db COOLTRAINERF
 	db HORDE
+	db SKIER_MUGSHOT
 .End

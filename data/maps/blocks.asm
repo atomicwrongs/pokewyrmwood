@@ -149,3 +149,24 @@ TauricMart_Blocks:
 TauricHouse_Blocks:
 	INCBIN "maps/TauricHouse.blk"
 
+ValerianPass_Blocks:
+	INCBIN "maps/ValerianPass.blk"
+	
+JacarandaTown_Blocks:
+	INCBIN "maps/JacarandaTown.blk"
+
+ValerianPassHouse_Blocks:
+	INCBIN "maps/ValerianPassHouse.blk"
+
+JacarandaCafe_Blocks:
+	INCBIN "maps/JacarandaCafe.blk"
+	
+JacarandaPokecenter_Blocks:
+	INCBIN "maps/JacarandaPokecenter.blk"
+
+JacarandaMart_Blocks:
+	INCBIN "maps/JacarandaMart.blk"
+
+JacarandaGym_Blocks:
+	INCBIN "maps/JacarandaGym.blk"
+

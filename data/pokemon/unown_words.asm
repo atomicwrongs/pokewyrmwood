@@ -10,6 +10,8 @@ UnownWords:
 	table_width 2, UnownWords
 	dw UnownWordA ; unused
 	dw UnownWordA
+	dw UnownWordSki
 	assert_table_length NUM_UNOWN + 1
 
 UnownWordA: unownword "ANGRY"
+UnownWordSki: unownword "SKI"

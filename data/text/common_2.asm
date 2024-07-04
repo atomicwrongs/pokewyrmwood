@@ -461,22 +461,21 @@ _AskHeadbuttText::
 	done
 
 _UseRockSmashText::
-	text_ram wStringBuffer2
-	text " used"
-	line "ROCK SMASH!"
+	text "You smashed the"
+	line "rock to pieces!"
 	prompt
 
 _MaySmashText::
-	text "Maybe a #MON"
-	line "can break this."
+	text "You could break"
+	line "this with a tool."
 	done
 
 _AskRockSmashText::
 	text "This rock looks"
 	line "breakable."
 
-	para "Want to use ROCK"
-	line "SMASH?"
+	para "Want to use the"
+	line "PICKAXE?"
 	done
 
 _RodBiteText::
@@ -1493,21 +1492,18 @@ _MayRegisterItemText::
 	done
 
 _OakText1::
-	text "Welcome to the"
-	line "world of #MON."
-
-	para "...This may not"
-	line "be the best time."
+	text "... news of the"
+	line "comet's approach."
 	prompt
 
 _OakText2::
-	text "Right now..."
-	line "..."
+	text "With the failure"
+	line "of PROJECT SKY"
+	cont "PILLAR..."
 	
-	para "A comet is"
-	line "hurtling towards"
-	cont "our planet from"
-	cont "space."
+	para "...impact"
+	line "with the NOMAIA"
+	cont "region within..."
 	text_end
 
 _OakText3::
@@ -1518,27 +1514,20 @@ _OakText3::
 
 _OakText4::
 
-	text "On impact, KANTO"
-	line "and its neigh-"
-	cont "bouring regions"
-	cont "will be destroyed."
-
-	para "The rest of the"
-	line "world will be"
-	cont "wracked by natu-"
-	cont "ral disasters"
-	cont "and smothered under"
-	cont "a cloud of ash."
+	text "NOMAIA and neigh-"
+	line "bouring regions..."
+	cont "destroyed..."
+	
+	para "The aftermath..."
+	line "natural disas-"
+	cont "ters..."
 	prompt
 
 _OakText5::
-	text "Scientists and"
-	line "champions have"
-	cont "tried everything."
-
-	para "The comet will"
-	line "not be stopped."
+	text "We are so, so"
+	line "sorry."
 	
-	para "Soon, it will all"
-	line "be over."
+	para "Please keep any"
+	line "domesticated #-"
+	cont "MON inside, and..."
 	prompt

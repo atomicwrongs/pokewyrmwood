@@ -73,6 +73,6 @@ TrainerEncounterMusic::
 	db MUSIC_RIVAL_ENCOUNTER       ; Lee
 	db MUSIC_HIKER_ENCOUNTER       ; mysticalman
 	db MUSIC_OFFICER_ENCOUNTER     ; horde
+	db MUSIC_LASS_ENCOUNTER        ;skier mugshot
 	assert_table_length NUM_TRAINER_CLASSES + 1
-	db MUSIC_HIKER_ENCOUNTER       ; unused
 	db MUSIC_HIKER_ENCOUNTER       ; unused

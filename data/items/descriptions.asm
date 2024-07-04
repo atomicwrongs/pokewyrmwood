@@ -120,7 +120,7 @@ ItemDescriptions:
 	dw MiracleSeedDesc
 	dw ThickClubDesc
 	dw FocusBandDesc
-	dw TeruSama8Desc
+	dw BrokenBallDesc
 	dw EnergyPowderDesc
 	dw EnergyRootDesc
 	dw HealPowderDesc
@@ -596,7 +596,8 @@ MintBerryDesc:
 	next "for sleep. (HOLD)@"
 
 RedApricornDesc:
-	db   "A red APRICORN.@"
+	db   "A pick for break-"
+	next "ing rocks.@"
 
 TinyMushroomDesc:
 	db   "An ordinary mush-"
@@ -729,8 +730,9 @@ FocusBandDesc:
 	db   "May prevent faint-"
 	next "ing. (HOLD)@"
 
-TeruSama8Desc:
-	db   "?@"
+BrokenBallDesc:
+	db   "A #BALL too"
+	next "broken to open.@"
 
 EnergyPowderDesc:
 	db   "Restores #MON"

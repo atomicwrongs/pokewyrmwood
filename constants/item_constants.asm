@@ -90,7 +90,7 @@
 	const KINGS_ROCK   ; 52
 	const BITTER_BERRY ; 53
 	const MINT_BERRY   ; 54
-	const RED_APRICORN ; 55
+	const PICKAXE ; 55
 	const TINYMUSHROOM ; 56
 	const BIG_MUSHROOM ; 57
 	const SILVERPOWDER ; 58
@@ -125,7 +125,7 @@
 	const MIRACLE_SEED ; 75
 	const THICK_CLUB   ; 76
 	const FOCUS_BAND   ; 77
-	const ITEM_78      ; 78
+	const BROKEN_BALL    ; 78
 	const ENERGYPOWDER ; 79
 	const ENERGY_ROOT  ; 7a
 	const HEAL_POWDER  ; 7b

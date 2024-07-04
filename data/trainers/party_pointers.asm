@@ -72,4 +72,5 @@ TrainerGroups:
 	dw LeeGroup
 	dw MysticalmanGroup
 	dw HordeGroup
+	dw SkierMugshotGroup
 	assert_table_length NUM_TRAINER_CLASSES

@@ -70,4 +70,5 @@ BTTrainerClassSprites:
 	db SPRITE_RIVAL
 	db SPRITE_SUPER_NERD
 	db SPRITE_BUGSY
+	db SPRITE_LASS
 	assert_table_length NUM_TRAINER_CLASSES

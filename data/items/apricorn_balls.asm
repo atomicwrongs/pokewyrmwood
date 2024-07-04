@@ -1,6 +1,5 @@
 ApricornBalls:
 	;  apricorn,     ball
-	db RED_APRICORN, LEVEL_BALL
 	db BLU_APRICORN, LURE_BALL
 	db YLW_APRICORN, MOON_BALL
 	db GRN_APRICORN, FRIEND_BALL

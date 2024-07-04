@@ -3062,6 +3062,7 @@ wChamomileGymOutsideSceneID::       db
 wChamomileGymSceneID::				db
 wRoute103SceneID::					db
 wMtGingerOutsideSceneID::           db
+wJacarandaTownSceneID::             db
 
 	ds 108
 

@@ -1065,4 +1065,15 @@ MACRO checksave
 	db checksave_command
 ENDM
 
+	const mugshotpic_command ; $56
+MACRO mugshotpic
+	db mugshotpic_command
+	db \1 ; pokemon
+ENDM
+
+	const closemugshotpic_command ; $57
+MACRO closemugshotpic
+	db closemugshotpic_command
+ENDM
+
 DEF NUM_EVENT_COMMANDS EQU const_value

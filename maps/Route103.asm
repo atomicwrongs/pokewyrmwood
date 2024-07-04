@@ -5,6 +5,7 @@ Route103_MapScripts:
 	def_scene_scripts
 	scene_script Route103EXPShareScene, SCENE_103_EXPSHARE
 	scene_script Route103Noop1, SCENE_103_NOOP
+	scene_script Route103Noop2, SCENE_103_NOOP2
 
 	def_callbacks
 
@@ -12,7 +13,43 @@ Route103EXPShareScene:
 	end
 
 Route103Noop1:
+	checkevent EVENT_BEAT_BUGSY
+	iffalse .NoNiaText
+	wait 15
+	playsound SFX_CALL
+	showemote EMOTE_SHOCK, PLAYER, 15
+	opentext
+	writetext GotNiaText
+	waitbutton
+	closetext
+	setscene SCENE_103_NOOP2
 	end
+
+.NoNiaText
+	end
+
+
+Route103Noop2:
+	end
+
+GotNiaText:
+	text "You got a text"
+	line "from NIA."
+	
+	para "'<PLAYER>!!!'"
+	line "I heard u beat"
+	cont "MINA and KITS!!"
+	
+	para "So freakin cool"
+	line ":D c u soon to"
+	cont "celebrate!!'"
+	
+	para "... Attached is"
+	line "a glittery GIF"
+	cont "of a PICHU saying"
+	cont "'CONGRAT-CHU-"
+	cont "LATIONS!'."
+	done
 
 ExpShareSceneStart:
 	checkevent EVENT_BEAT_FALKNER
@@ -242,7 +279,7 @@ Route103_MapEvents:
 
 	def_object_events
 	object_event 23, 0, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route102GirlScript, -1
-	object_event 2, 12, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerSergei, -1
+	object_event 2, 12, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSergei, -1
 	object_event 8, 19, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerHuck, -1
 	object_event 26, 22, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerTim, -1
 	object_event 17, 22, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BasilRdTree1, -1

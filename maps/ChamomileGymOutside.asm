@@ -49,11 +49,13 @@ Basketballboy1Script:
 	writetext YesBallText
 	waitbutton
 	closetext
-	special FadeOutPalettes
-	special FadeOutMusic
-	pause 20
-	special LoadMapPalettes
-	special RestartMapMusic
+	special FadeBlackQuickly
+	special ReloadSpritesNoPalettes
+	playsound SFX_BALL_BOUNCE
+	waitsfx
+	playsound SFX_BALL_WOBBLE
+	waitsfx
+	special FadeInQuickly
 	opentext
 	writetext CoolBallText
 	promptbutton

@@ -54,6 +54,13 @@ INCLUDE "maps/TauricTown.asm"
 INCLUDE "maps/TauricPokecenter.asm"
 INCLUDE "maps/TauricMart.asm"
 INCLUDE "maps/TauricHouse.asm"
+INCLUDE "maps/ValerianPass.asm"
+INCLUDE "maps/JacarandaTown.asm"
+INCLUDE "maps/ValerianPassHouse.asm"
+INCLUDE "maps/JacarandaCafe.asm"
+INCLUDE "maps/JacarandaPokecenter.asm"
+INCLUDE "maps/JacarandaMart.asm"
+INCLUDE "maps/JacarandaGym.asm"
 
 SECTION "Map Scripts 7", ROMX
 

@@ -226,7 +226,7 @@ MinaMoveRMovement:
 ChamomileMinaScript:
 	checkevent EVENT_BEAT_FALKNER
 	iftrue .FightDone
-	turnobject CHAMOGYM_MINA, RIGHT
+	turnobject CHAMOGYM_MINA, LEFT
 	opentext
 	writetext MinaBeforeText
 	waitbutton

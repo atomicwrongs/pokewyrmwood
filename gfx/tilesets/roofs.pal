@@ -11,8 +11,8 @@
 	RGB 06,05,17, 02,02,08 ; nite
 
 ; group 24 (New Bark)
-	RGB 20,31,14, 11,23,05 ; morn/day
-	RGB 09,13,08, 06,09,04 ; nite
+	RGB 15,26,16, 07,18,07 ; morn/day
+	RGB 08,11,15, 05,05,10 ; nite
 
 ; group 16 (Pokémon League)
 	RGB 21,21,21, 13,13,13 ; morn/day
@@ -31,5 +31,9 @@
 	RGB 12,12,00, 10,09,05 ; nite
 
 ; group 8 (Tauric)
-	RGB 15,10,31, 07,05,15 ; morn/day
+	RGB 19,15,22, 15,10,16 ; morn/day
 	RGB 06,05,17, 02,02,08 ; nite
+
+; group 9 (Jacaranda)
+	RGB 21,30,30, 12,28,27 ; morn/day
+	RGB 09,11,17, 05,06,11 ; nite

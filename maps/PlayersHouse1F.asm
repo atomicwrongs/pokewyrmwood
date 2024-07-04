@@ -23,17 +23,13 @@ PhoneMainScript:
 	setmapscene NEW_BARK_TOWN, SCENE_LITTLESAGE_BIRTHDAY
 	showemote EMOTE_SHOCK, PLAYER, 15
 	opentext
-	writetext PhoneRangScript
+	writetext PocketedPhoneText
 	promptbutton
 	setflag ENGINE_POKEGEAR
 	setflag ENGINE_PHONE_CARD
 	setflag ENGINE_MAP_CARD
 	setscene SCENE_PLAYERSHOUSE1F_NOOP
 	clearevent PhoneMainScript
-	closetext
-	opentext
-	writetext PocketedPhoneText
-	promptbutton
 	special SetDayOfWeek
 .SetDayOfWeek:
 	writetext IsItDSTText
@@ -77,26 +73,13 @@ PlayersHouse1FFridgeScript:
 PlayersHouse1FBookcaseScript:
 	jumptext PlayersHouse1FBookcaseText
 
-PhoneRangScript:
-	text "Your #GEAR"
-	line "buzzed. It's a"
-	cont "text from NIA."
-
-	para "'Hi <PLAYER>!!"
-	line "Lee and I got"
-	cont "you something."
-
-	para "'We're right"
-	line "outside, xx'"
-	done
 
 PocketedPhoneText:
-	text "<PLAYER> pocketed"
-	line "the #GEAR."
-
-	para "Oh, wait, the"
-	line "day of the week"
-	cont "isn't set."
+	text "Oh, wait."
+	line "The day of the"
+	cont "week isn't set"
+	cont "on your #-"
+	cont "GEAR."
 	done
 
 IsItDSTText:

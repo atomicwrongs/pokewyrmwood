@@ -122,11 +122,7 @@ RoadblockManScript:
 	end
 
 .ClearRoadblock
-	opentext
-	writetext RoadblockClearedText
 	setscene SCENE_CHAMOMILE_PARK_CLEAR
-	promptbutton
-	closetext
 	end
 
 CantGoThisWay4:
@@ -144,7 +140,12 @@ CantGoThisWay4:
 	done
 
 RoadblockManScript2:
+	checkscene
+	iftrue .ClearedRoadBlock
 	jumptextfaceplayer CantGoThisWay3
+
+.ClearedRoadBlock
+	jumptextfaceplayer RoadblockClearedText
 	
 StepBackMovement:
 	step UP
@@ -224,6 +225,8 @@ ChamomilePark_MapEvents:
 
 	def_warp_events
 	warp_event 28, 15, CHAMOMILE_GROUNDSKEEPER, 1
+	warp_event 16, 35, VALERIAN_PASS, 1
+	warp_event 17, 35, VALERIAN_PASS, 2
 
 	def_coord_events
 	coord_event 17, 34, SCENE_CHAMOMILE_PARK_NOBADGES, RoadblockManScript

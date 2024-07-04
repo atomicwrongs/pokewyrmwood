@@ -163,3 +163,13 @@ ENDM
 	map_attributes TauricPokecenter, TAURIC_POKECENTER, $00, 0
 	map_attributes TauricMart, TAURIC_MART, $00, 0
 	map_attributes TauricHouse, TAURIC_HOUSE, $00, 0
+
+	map_attributes ValerianPass, VALERIAN_PASS, $35, WEST
+	connection west, JacarandaTown, JACARANDA_TOWN, 0
+	map_attributes JacarandaTown, JACARANDA_TOWN, $35, EAST
+	connection east, ValerianPass, VALERIAN_PASS, 0
+	map_attributes ValerianPassHouse, VALERIAN_PASS_HOUSE, $00, 0
+	map_attributes JacarandaCafe, JACARANDA_CAFE, $00, 0
+	map_attributes JacarandaPokecenter, JACARANDA_POKECENTER, $00, 0
+	map_attributes JacarandaMart, JACARANDA_MART, $00, 0
+	map_attributes JacarandaGym, JACARANDA_GYM, $00, 0

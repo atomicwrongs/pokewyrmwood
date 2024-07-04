@@ -712,4 +712,7 @@ DEF KRIS EQU __trainer_class__
 	trainerclass HORDE  ; 45
 	const ARIADOS_HORDE
 
+	trainerclass SKIER_MUGSHOT ;46
+	const MUGSHOT_TEST
+
 DEF NUM_TRAINER_CLASSES EQU __trainer_class__ - 1

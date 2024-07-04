@@ -223,4 +223,114 @@ JohtoGrassWildMons:
 	db 9, MURKROW
 	end_grass_wildmons
 
+	def_grass_wildmons MT_GINGER_INTERIOR
+	;morn
+	db 5 percent, 5 percent, 5 percent
+	db 8, SQUEAKRAG
+	db 9, BERGMITE
+	db 10, BURRUSSET
+	db 8, CUBTERRA
+	db 9, CUBONE
+	db 10, CUBTERRA
+	db 8, BURRUSSET
+	db 9, SANDSHREW
+	db 10, NACLI
+	db 9, PANSTRIKE
+	; day
+	db 8, SQUEAKRAG
+	db 9, PEBBOWL
+	db 10, BERGMITE
+	db 8, PEBBOWL
+	db 9, CUBONE
+	db 10, CUBTERRA
+	db 8, DRILBUR
+	db 9, NACLI
+	db 10, DRILBUR
+	db 9, CANDYCE
+	; nite
+	db 8, CUBTERRA
+	db 9, MEWLT
+	db 7, WOOBAT
+	db 10, WOOBAT
+	db 8, SANDSHREW
+	db 10, SANDSHREW
+	db 10, PEBBOWL
+	db 9, PEBBOWL
+	db 8, BERGMITE
+	db 9, BERGMITE
+
+	def_grass_wildmons MT_GINGER_OUTSIDE
+	;morn
+	db 5 percent, 5 percent, 5 percent
+	db 8, PANSTRIKE
+	db 9, BERGMITE
+	db 10, SQUEAKRAG
+	db 8, MEWLT
+	db 9, CUBONE
+	db 10, SHIVERKIT
+	db 8, CUBONE
+	db 9, SHIVERKIT
+	db 10, PEBBOWL
+	db 9, PANSTRIKE
+	; day
+	db 8, SHIVERKIT
+	db 9, PEBBOWL
+	db 10, BERGMITE
+	db 8, PALLAZIP
+	db 9, PALLAZIP
+	db 10, GLIGAR
+	db 8, GLIGAR
+	db 9, NACLI
+	db 10, PEBBOWL
+	db 9, CANDYCE
+	; nite
+	db 8, CUBTERRA
+	db 9, MEWLT
+	db 7, WOOBAT
+	db 10, WOOBAT
+	db 8, SNEASEL
+	db 10, SNEASEL
+	db 10, PEBBOWL
+	db 9, SHIVERKIT
+	db 8, WOOBAT
+	db 16, RAZORINK
+
+	def_grass_wildmons VALERIAN_PASS
+	db 10 percent, 10 percent, 5 percent ; encounter rates: morn/day/nite
+	; morn
+	db 15, EEVEE
+	db 18, PUGILHISS
+	db 20, BUIZEL
+	db 15, BUIZEL
+	db 16, CORPHISH
+	db 17, MARILL
+	db 16, MARILL
+	db 18, HERACROSS
+	db 16, WATTREL
+	db 19, KITEKAT
+	; day
+	db 15, KITEKAT
+	db 18, EEVEE
+	db 20, KRABBY
+	db 17, KITEKAT
+	db 16, MARILL
+	db 17, BUIZEL
+	db 16, BUIZEL
+	db 18, MARILL
+	db 16, WALLOPY
+	db 19, KRABBY
+	; nite
+	db 15, SQUEAKABOO
+	db 18, SQUEAKABOO
+	db 20, PARASOUL
+	db 15, PARASOUL
+	db 16, THREADLY
+	db 17, MURKROW
+	db 16, MOMENTAIRY
+	db 18, KRABBY
+	db 16, KRABBY
+	db 19, CORPHISH
+	end_grass_wildmons
+
+
 	db -1 ; end

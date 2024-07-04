@@ -22,5 +22,26 @@ JohtoWaterWildMons:
 	db 15, SPLASHFUL
 	db 20, BUIZEL
 	end_water_wildmons
+	
+	def_water_wildmons MT_GINGER_INTERIOR
+	db 6 percent ; encounter rate
+	db 20, SHELLDER
+	db 22, LAPRAS
+	db 20, KRABBY
+	end_water_wildmons
+	
+	def_water_wildmons VALERIAN_PASS
+	db 9 percent ; encounter rate
+	db 20, BUIZEL
+	db 21, SPLASHFUL
+	db 22, VELUZA
+	end_water_wildmons
+	
+	def_water_wildmons JACARANDA_TOWN
+	db 9 percent ; encounter rate
+	db 20, BUIZEL
+	db 21, SPLASHFUL
+	db 22, VELUZA
+	end_water_wildmons
 
 	db -1 ; end

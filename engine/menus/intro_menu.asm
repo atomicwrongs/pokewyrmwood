@@ -67,7 +67,7 @@ NewGame:
 	call OakSpeech
 	call InitializeWorld
 
-	ld a, LANDMARK_SPECIAL
+	ld a, LANDMARK_NEW_BARK
 	ld [wPrevLandmark], a
 
 	ld a, SPAWN_HOME
@@ -633,12 +633,35 @@ Continue_DisplayGameTime:
 	jp PrintNum
 
 OakSpeech:
+	call RotateThreePalettesRight
+	call ClearTilemap
+	xor a
+	ld [wCurPartySpecies], a
+	farcall DrawIntroPlayerPic
+
+	ld b, SCGB_TRAINER_OR_MON_FRONTPIC_PALS
+	call GetSGBLayout
+	call Intro_RotatePalettesLeftFrontpic
+
+	ld hl, OakText6
+	call PrintText
+	call NamePlayer
+
 	farcall InitClock
+	
 	call RotateFourPalettesLeft
 	call ClearTilemap
-	
+
 	ld de, MUSIC_REQUIEM
 	call PlayMusic
+
+	call RotateFourPalettesRight
+	call RotateThreePalettesRight
+	xor a
+	ld [wCurPartySpecies], a
+	ld a, POKEMON_PROF
+	ld [wTrainerClass], a
+	call Intro_PrepTrainerPic
 
 	ld b, SCGB_TRAINER_OR_MON_FRONTPIC_PALS
 	call GetSGBLayout
@@ -652,20 +675,15 @@ OakSpeech:
 	call PrintText
 	ld hl, OakText5
 	call PrintText
+
 	call RotateThreePalettesRight
 	call ClearTilemap
-
-	xor a
-	ld [wCurPartySpecies], a
-	farcall DrawIntroPlayerPic
-
-	ld b, SCGB_TRAINER_OR_MON_FRONTPIC_PALS
+	call RotateThreePalettesLeft
 	call GetSGBLayout
-	call Intro_RotatePalettesLeftFrontpic
 
-	ld hl, OakText6
-	call PrintText
-	call NamePlayer
+	ld de, SFX_CALL
+	call PlaySFX
+	
 	ld hl, OakText7
 	call PrintText
 	ret
@@ -676,7 +694,9 @@ OakText1:
 
 OakText2:
 	text_far _OakText2
-	text_end
+	text_asm
+	ld hl, OakText3
+	ret
 
 OakText3:
 	text_far _OakText3
@@ -1077,7 +1097,7 @@ TitleScreenEntrance:
 	ldh [hLCDCPointer], a
 
 ; Play the title screen music.
-	ld de, MUSIC_WAUUH
+	ld de, MUSIC_TITLE
 	call PlayMusic
 
 	ld a, $88

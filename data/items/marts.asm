@@ -387,11 +387,10 @@ MartIndigoPlateau:
 	db -1 ; end
 
 MartUnderground:
-	db 4 ; # items
-	db ENERGYPOWDER
-	db ENERGY_ROOT
-	db HEAL_POWDER
-	db REVIVAL_HERB
+	db 3 ; # items
+	db FRESH_WATER
+	db SODA_POP
+	db LEMONADE
 	db -1 ; end
 
 DefaultMart:

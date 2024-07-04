@@ -24,6 +24,7 @@ MapScenes::
 	scene_var CHAMOMILE_GYM,				wChamomileGymSceneID
 	scene_var ROUTE_103,                    wRoute103SceneID
 	scene_var MT_GINGER_OUTSIDE,            wMtGingerOutsideSceneID
+	scene_var JACARANDA_TOWN,               wJacarandaTownSceneID
 
 	scene_var INDIGO_PLATEAU_POKECENTER_1F, wIndigoPlateauPokecenter1FSceneID
 	scene_var WILLS_ROOM,                   wWillsRoomSceneID

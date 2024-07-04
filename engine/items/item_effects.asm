@@ -98,7 +98,7 @@ ItemEffects:
 	dw NoEffect            ; KINGS_ROCK
 	dw BitterBerryEffect   ; BITTER_BERRY
 	dw StatusHealingEffect ; MINT_BERRY
-	dw NoEffect            ; RED_APRICORN
+	dw PickaxeEffect         ; RED_APRICORN
 	dw NoEffect            ; TINYMUSHROOM
 	dw NoEffect            ; BIG_MUSHROOM
 	dw NoEffect            ; SILVERPOWDER
@@ -2929,4 +2929,8 @@ GetMthMoveOfCurrentMon:
 	
 LumberAxeEffect:
 	farcall CutFunction
+	ret
+
+PickaxeEffect:
+	farcall RockSmashFunction
 	ret

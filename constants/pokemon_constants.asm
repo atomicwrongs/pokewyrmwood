@@ -285,4 +285,5 @@ DEF NUM_POKEMON EQU const_value - 1
 ; - UnownFramesPointers (see gfx/pokemon/unown_frame_pointers.asm)
 	const_def 1
 	const UNOWN_A ;  1
+	const UNOWN_SKI ; 2
 DEF NUM_UNOWN EQU const_value - 1 ; 26

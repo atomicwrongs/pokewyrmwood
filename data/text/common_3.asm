@@ -1,19 +1,13 @@
 _OakText6::
-	text "But I digress."
-	line "What's your name?"
+	text "And your name?"
 	prompt
 
 _OakText7::
-	text "<PLAYER>... I'm"
-	line "So sorry."
-
-	para "Your journey will"
-	line "be a shorter one"
-	cont "than anticipated."
-
-	para "Make the most of"
-	line "it. Please."
-	done
+	text "Someone's calling."
+	line "... Your friends"
+	cont "have a gift for"
+	cont "you outside."
+	prompt
 
 _ClockTimeMayBeWrongText::
 	text "The clock's time"

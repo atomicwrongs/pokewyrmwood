@@ -107,4 +107,13 @@ ENDM
 	map_const TAURIC_HOUSE,                                   4, 3 ; 5
 	endgroup
 
+	newgroup JACARANDA                                              ; 9
+	map_const VALERIAN_PASS,                                  10, 18 ; 1 
+	map_const JACARANDA_TOWN,                                 15, 18 ; 2
+	map_const VALERIAN_PASS_HOUSE,                            4, 3 ; 3
+	map_const JACARANDA_CAFE,                                 4, 4 ; 4
+	map_const JACARANDA_POKECENTER,                           4, 3 ; 5
+	map_const JACARANDA_MART,                                 3, 4 ; 6
+	map_const JACARANDA_GYM,                                  5, 10 ; 7
+
 DEF NUM_MAP_GROUPS EQU const_value ; 8

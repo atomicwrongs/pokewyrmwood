@@ -3551,3 +3551,12 @@ HordeGroup:
 	db 20, SPINARAK
 	db 25, ARIADOS
 	db -1 ; end
+
+SkierMugshotGroup:
+	; SKIER
+	db "SPIDERS@", TRAINERTYPE_NORMAL
+	db 20, SPINARAK
+	db 20, SPINARAK
+	db 20, SPINARAK
+	db 25, ARIADOS
+	db -1

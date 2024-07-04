@@ -33,6 +33,9 @@ EnteiFrontpic:       INCBIN "gfx/pokemon/entei/front.animated.2bpp.lz"
 SuicuneFrontpic:     INCBIN "gfx/pokemon/suicune/front.animated.2bpp.lz"
 KimonoGirlPic:       INCBIN "gfx/trainers/kimono_girl.2bpp.lz"
 AlakazamBackpic:     INCBIN "gfx/pokemon/alakazam/back.2bpp.lz"
+SkierMugshotPic:     INCBIN "gfx/trainers/skiermugshot.2bpp.lz"
+UnownSkiFrontPic:    INCBIN "gfx/pokemon/unown_ski/front.2bpp.lz"
+UnownSkiBackPic:     INCBIN "gfx/pokemon/unown_ski/back.2bpp.lz"
 
 
 SECTION "Pics 2", ROMX

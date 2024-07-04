@@ -1,7 +1,7 @@
 	db "JUNGLE@" ; species name
 	dw 510, 3852 ; height, weight
 
-	db   "Many rare plans"
+	db   "Many rare plants"
 	next "have been saved"
 	next "from extinction by"
 

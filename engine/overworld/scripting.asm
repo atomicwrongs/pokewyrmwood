@@ -234,6 +234,8 @@ ScriptCommandTable:
 	dw Script_getname                    ; a7
 	dw Script_wait                       ; a8
 	dw Script_checksave                  ; a9
+	dw Script_mugshotpic
+	dw Script_closemugshotpic
 	assert_table_length NUM_EVENT_COMMANDS
 
 StartScript:
@@ -2359,3 +2361,17 @@ Script_checkver_duplicate: ; unreferenced
 
 .gs_version:
 	db GS_VERSION
+
+Script_mugshotpic:
+	call GetScriptByte
+	and a
+	jr nz, .ok
+	ld a, [wScriptVar]
+.ok
+	ld [wCurPartySpecies], a
+	farcall Mugshotpic
+	ret
+
+Script_closemugshotpic:
+	farcall CloseMugshotpic
+	ret

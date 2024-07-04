@@ -72,4 +72,5 @@ TrainerPicPointers::
 	dba_pic LeePic
 	dba_pic MysticalmanPic
 	dba_pic HordePic
+	dba_pic SkierMugshotPic
 	assert_table_length NUM_TRAINER_CLASSES

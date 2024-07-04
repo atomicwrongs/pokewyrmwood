@@ -1,7 +1,7 @@
 	db "DARNER@" ; species name
 	dw 603, 1135 ; height, weight
 
-	db   "With its incredible"
+	db   "With its strong"
 	next "jaws, it bites"
 	next "apart the heads"
 

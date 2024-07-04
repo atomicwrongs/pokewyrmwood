@@ -17,6 +17,7 @@ SpawnPoints:
 	spawn TARRAGON_TOWN,                 15, 10
 	spawn CHAMOMILE_CITY,                36, 14
 	spawn TAURIC_TOWN,                   11, 18
+	spawn JACARANDA_TOWN,                 7, 20
 
 	spawn N_A,                          -1, -1
 

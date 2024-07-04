@@ -5,6 +5,7 @@
 	const ROOF_AZALEA    ; 2
 	const ROOF_OLIVINE   ; 3
 	const ROOF_GOLDENROD ; 4
+	const ROOF_JACARANDA
 DEF NUM_ROOFS EQU const_value
 
 MapGroupRoofs:
@@ -17,9 +18,10 @@ MapGroupRoofs:
 	db ROOF_NEW_BARK  ;  3 (New Bark)
 	db -1             ;  4 (Indigo?)
 	db ROOF_NEW_BARK  ;  5 (Tarragon)
-	db -1             ;  6 (Chamomile)
-	db ROOF_GOLDENROD ;  7 (Dungeons)
+	db -1             ;  6 (Dungeons)
+	db ROOF_GOLDENROD ;  7 (Chamomile)
 	db ROOF_OLIVINE   ; 8 (Tauric) 
+	db ROOF_JACARANDA ; 9 (Jacaranda)
 	assert_table_length NUM_MAP_GROUPS + 1
 
 Roofs:
@@ -29,5 +31,6 @@ INCBIN "gfx/tilesets/roofs/new_bark.2bpp"
 INCBIN "gfx/tilesets/roofs/violet.2bpp"
 INCBIN "gfx/tilesets/roofs/azalea.2bpp"
 INCBIN "gfx/tilesets/roofs/olivine.2bpp"
+INCBIN "gfx/tilesets/roofs/goldenrod.2bpp"
 INCBIN "gfx/tilesets/roofs/goldenrod.2bpp"
 	assert_table_length NUM_ROOFS

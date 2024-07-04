@@ -72,4 +72,5 @@ BTTrainerClassGenders:
 	db MALE   ; LEE
 	db MALE   ; MYSTICALMAN
 	db FEMALE ; ARIADOSHORDE
+	db FEMALE ; SKIER MUGSHOT
 	assert_table_length NUM_TRAINER_CLASSES
