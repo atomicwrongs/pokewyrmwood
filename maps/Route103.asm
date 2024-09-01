@@ -40,9 +40,8 @@ GotNiaText:
 	line "I heard u beat"
 	cont "MINA and KITS!!"
 	
-	para "So freakin cool"
-	line ":D c u soon to"
-	cont "celebrate!!'"
+	para "So freakin cool!"
+	line "Proud of u!!"
 	
 	para "... Attached is"
 	line "a glittery GIF"
@@ -52,8 +51,8 @@ GotNiaText:
 	done
 
 ExpShareSceneStart:
-	checkevent EVENT_BEAT_FALKNER
-	iffalse .NoExpShare
+	checkitem EXP_SHARE
+	iftrue .NoExpShare
 	opentext
 	writetext WaitUpText
 	showemote EMOTE_SHOCK, PLAYER, 15

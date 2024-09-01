@@ -55,6 +55,7 @@ JacarandaMeetNiaScript:
 	applymovement JACARANDA_NIA, NiaLeaveMovement
 	disappear JACARANDA_NIA
 	setscene SCENE_JACARANDA_PRE_WADE
+	setevent EVENT_JACARANDA_NIA
 	end
 
 .NiaRejectionScript
@@ -64,6 +65,7 @@ JacarandaMeetNiaScript:
 	applymovement JACARANDA_NIA, NiaLeaveMovement
 	disappear JACARANDA_NIA
 	setscene SCENE_JACARANDA_POST_WADE
+	setevent EVENT_JACARANDA_NIA
 	end
 
 NiaHiIntroText:
@@ -274,7 +276,7 @@ JacarandaTown_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event 15, 28, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, JacarandaNiaScript, -1
+	object_event 15, 28, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, JacarandaNiaScript, EVENT_JACARANDA_NIA
 	object_event 15, 25, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, JacarandaYoungsterScript, -1
 	object_event 11, 22, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, JacGrannyScript, -1
 	object_event 20, 25, SPRITE_ROCKER, SPRITEMOVEDATA_WANDER, 2, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, JacCooltrainerScript, -1

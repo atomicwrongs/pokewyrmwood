@@ -2,8 +2,6 @@
 
 ChamomilePark_MapScripts:
 	def_scene_scripts
-	scene_script ChamomileParkNoop1Scene, SCENE_CHAMOMILE_PARK_NOBADGES
-	scene_script ChamomileParkNoop2Scene, SCENE_CHAMOMILE_PARK_CLEAR
 
 	def_callbacks
 
@@ -90,78 +88,36 @@ FlowerCrownText:
 
 RoadblockManScript:
 	checkevent EVENT_BEAT_FALKNER
-	iftrue .BeatMina
+	iftrue .BeatKits
 	faceplayer
 	opentext
 	writetext CantGoThisWay
 	promptbutton
 	closetext
-	applymovement PLAYER, StepBackMovement
 	end
 	
-.BeatMina
+.BeatKits
 	checkevent EVENT_BEAT_BUGSY
 	iftrue .CheckifBeatMina
 	faceplayer
 	opentext
-	writetext CantGoThisWay2
+	writetext CantGoThisWay
 	promptbutton
 	closetext
-	applymovement PLAYER, StepBackMovement
 	end
 
 .CheckifBeatMina
-	checkevent EVENT_BEAT_FALKNER
-	iftrue .ClearRoadblock
 	faceplayer
 	opentext
-	writetext CantGoThisWay4
+	writetext RoadblockClearedText
 	promptbutton
 	closetext
-	applymovement PLAYER, StepBackMovement
 	end
 
-.ClearRoadblock
-	setscene SCENE_CHAMOMILE_PARK_CLEAR
-	end
-
-CantGoThisWay4:
-	text "Whaaat, you beat"
-	line "KITS? Great job!"
-	
-	para "Those cloaked guys"
-	line "still haven't budged,"
-	cont "though."
-	
-	para "How about you head"
-	line "to the EAST part of"
-	cont "CHAMOMILE CITY and"
-	cont "challenge MINA?"
-	done
-
-RoadblockManScript2:
-	checkscene
-	iftrue .ClearedRoadBlock
-	jumptextfaceplayer CantGoThisWay3
-
-.ClearedRoadBlock
-	jumptextfaceplayer RoadblockClearedText
-	
-StepBackMovement:
-	step UP
-	step UP
-	step_end
-
-CantGoThisWay3:
-	text "Those people in"
-	line "cloaks..."
-	done
 
 CantGoThisWay:
-	text "The cliff path to"
-	line "JACARANDA TOWN"
-	cont "is temporarily"
-	cont "closed."
+	text "Hey, be careful"
+	line "going this way."
 	
 	para "Some guys in"
 	line "cloaks are yell-"
@@ -171,50 +127,14 @@ CantGoThisWay:
 	line "it. It should be"
 	cont "sorted, uh..."
 	
-	para "In roughly the"
-	line "time it takes to"
-	cont "beat GYM LEADER"
-	cont "MINA, run to"
-	cont "TAURIC TOWN, beat"
-	cont "GYM LEADER KITS"
-	cont "and run back here."
-	
-	para "Weirdly specific?"
-	line "Eh, it's a rough"
-	cont "estimate."
-	done
-
-CantGoThisWay2:
-	text "You beat MINA?"
-	line "Good job!"
-
-	para "Road's still"
-	line "closed, though."
-	
-	para "If you head south"
-	line "from city center,"
-	cont "the mountain path"
-	cont "will take you to"
-	cont "TAURIC TOWN."
-	
-	para "GYM LEADER KITS"
-	line "isn't meant to be"
-	cont "out of their hos-"
-	cont "pital bed, but"
-	cont "they're a bit of a"
-	cont "workaholic."
-	
-	para "I'm sure they"
-	line "won't say no to"
-	cont "a battle while you"
-	cont "wait."
+	para "Soon."
 	done
 
 RoadblockClearedText:
 	text "... ... ..."
 	line "... ..."
 	
-	para "They... they all"
+	para "They all"
 	line "jumped."
 	
 	para "... ... ..."
@@ -229,7 +149,6 @@ ChamomilePark_MapEvents:
 	warp_event 17, 35, VALERIAN_PASS, 2
 
 	def_coord_events
-	coord_event 17, 34, SCENE_CHAMOMILE_PARK_NOBADGES, RoadblockManScript
 
 	def_bg_events
 	bg_event 32, 15, BGEVENT_READ, ParkSignScript
@@ -240,4 +159,4 @@ ChamomilePark_MapEvents:
 	object_event 3, 10, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SilentLadyScript, -1
 	object_event 11, 20, SPRITE_OFFICER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SurveyRangerScript, -1
 	object_event 17, 17, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, FlowerCrownGirl, -1
-	object_event 16, 34, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RoadblockManScript2, -1
+	object_event 16, 34, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RoadblockManScript, -1
